@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The AGOffice — Adaptable Governance Office</title>
+<meta name="description" content="AGOffice provides the resources, expertise and platform to help strategic and creative cross-functional teams bring both flexibility and structure to their work without slowing it down.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; font-family: 'Onest', system-ui, sans-serif; background: #FAF9F5; color: #1C1B18; }
+  a { color: inherit; text-decoration: none; }
+  #top, #move, #framework, #faq, #about, #intake { scroll-margin-top: 84px; }
+  input, textarea, select, button { font-family: inherit; }
+  .ago-navlink { transition: color .15s ease; }
+  .ago-navlink:hover { color: #1F4FA0; }
+  .ago-btn-primary { transition: transform .15s ease, box-shadow .15s ease; display: inline-block; }
+  .ago-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(28,27,24,0.18); }
+  .ago-underline-link { border-bottom: 2px solid #1C1B18; padding-bottom: 2px; transition: border-color .15s ease, color .15s ease; }
+  .ago-underline-link:hover { border-color: #1F4FA0; color: #1F4FA0; }
+  .ago-card { transition: transform .15s ease, box-shadow .15s ease; }
+  .ago-card:hover { transform: translateY(-3px); box-shadow: 0 14px 28px rgba(28,27,24,0.08); }
+  .ago-field { width: 100%; box-sizing: border-box; padding: 12px 14px; border: 1px solid rgba(28,27,24,0.18); border-radius: 2px; font-size: 14.5px; background: #FFFFFF; color: #1C1B18; }
+  .ago-field:focus { outline: none; border-color: #1F4FA0; }
+  .ago-label { display: block; font-size: 11.5px; font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase; color: #6B6A64; margin-bottom: 6px; }
+  @keyframes ago-marquee { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+  .ago-marquee-track { animation: ago-marquee 34s linear infinite; }
+  .ago-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(28,27,24,0.18); }
+  .ago-eyebrow { font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #1F4FA0; margin-bottom: 12px; }
+  .ago-plus { flex-shrink: 0; font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 30px; color: rgba(28,27,24,0.25); align-self: center; }
+  .ago-diagram-box { border: 1px solid rgba(28,27,24,0.14); background: #FFFFFF; border-radius: 2px; padding: 22px 26px; width: 100%; box-sizing: border-box; }
+  .ago-diagram-arrow { text-align: center; font-size: 20px; color: rgba(28,27,24,0.3); line-height: 1; padding: 2px 0; }
+  .ago-spectrum-item { font-family: 'Poppins', sans-serif; font-weight: 700; letter-spacing: 0.2px; }
+  .ago-spectrum-slash { color: rgba(28,27,24,0.25); font-weight: 300; }
+  .ago-faq-item { padding: 26px 0; border-bottom: 1px solid rgba(28,27,24,0.1); }
+  .ago-stat-tile { padding: 24px 0 0; border-top: 3px solid #1F4FA0; }
+  #ago-rotate-word-inner { display: block; transition: opacity 0.26s ease; }
+  .ago-hero-break-1, .ago-hero-break-2 { display: none; }
+  @media (max-width: 860px) {
+    .ago-hide-mobile { display: none !important; }
+    .ago-mobile-center-tagline { display: none !important; } /* ARCHIVED: was block !important */
+    .ago-show-mobile { display: flex !important; }
+    .ago-grid-3 { grid-template-columns: 1fr !important; }
+    .ago-grid-4 { grid-template-columns: 1fr 1fr !important; }
+    .ago-grid-5 { grid-template-columns: 1fr 1fr !important; }
+    .ago-grid-2 { grid-template-columns: 1fr !important; }
+    .ago-section-h2 { font-size: 26px !important; }
+    .ago-form-grid { grid-template-columns: 1fr !important; }
+    .ago-stack-row { flex-direction: column !important; }
+    .ago-plus { transform: rotate(90deg); margin: 2px 0; }
+    .ago-spectrum-row { flex-direction: column !important; align-items: flex-start !important; gap: 8px !important; }
+    .ago-spectrum-slash { display: none; }
+    .ago-hero-h1 { font-size: clamp(28px, 9vw, 38px) !important; }
+    .ago-hero-break-1, .ago-hero-break-2 { display: block; }
+  }
+</style>
+</head>
+<body>
+
+<div style="width: 100%; box-sizing: border-box; overflow-x: hidden;">
+
+  <!-- NAV -->
+  <div style="position: sticky; top: 0; z-index: 50; background: rgba(250,249,245,0.94); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(28,27,24,0.08);">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between;">
+      <div style="display: flex; align-items: center; gap: 16px; flex-shrink: 0;">
+        <a href="#top" style="display: flex; align-items: baseline; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 21px; letter-spacing: -0.01em; color: #1C1B18;">AGOffice<span style="color: #1F4FA0;">.</span></a>
+        <div class="ago-hide-mobile" style="display: none; width: 1px; height: 20px; background: rgba(28,27,24,0.15);"></div>
+        <!-- ARCHIVED: nav tagline (Maya may want it back) -->
+        <div class="ago-hide-mobile" style="display: none; font-size: 10.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #1F4FA0; max-width: 250px; line-height: 1.35;">Project &amp; PMO Governance for Strategic &amp; Creative Teams</div>
+      </div>
+      <!-- ARCHIVED: mobile center tagline (Maya may want it back) -->
+      <div class="ago-mobile-center-tagline" style="display: none; flex: 1; text-align: center; padding: 0 14px; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: #1F4FA0; line-height: 1.4;">Project &amp; PMO Governance for Strategic &amp; Creative Teams</div>
+      <div class="ago-hide-mobile" style="display: flex; align-items: center; gap: 30px; font-size: 14px; font-weight: 600;">
+        <a class="ago-navlink" href="#framework">Approach</a>
+        <a class="ago-navlink" href="#faq">FAQ</a>
+        <a class="ago-navlink" href="https://www.thepmohq.com" target="_blank" rel="noopener noreferrer">PMOHQ</a>
+        <a class="ago-navlink" href="#about">About</a>
+        <a href="#intake" style="background: #1F4FA0; color: #FAF9F5; padding: 10px 18px; border-radius: 2px; font-weight: 700; font-size: 13.5px;">Pull Up</a>
+      </div>
+      <button class="ago-show-mobile" onclick="toggleMobileMenu()" aria-label="Menu" style="display: none; background: none; border: none; padding: 8px; cursor: pointer; flex-direction: column; gap: 5px;">
+        <span style="width: 22px; height: 2px; background: #1C1B18; display: block;"></span>
+        <span style="width: 22px; height: 2px; background: #1C1B18; display: block;"></span>
+        <span style="width: 22px; height: 2px; background: #1C1B18; display: block;"></span>
+      </button>
+    </div>
+    <div id="ago-mobile-menu" style="display: none; border-top: 1px solid rgba(28,27,24,0.08); background: #FAF9F5; padding: 8px 24px 20px; flex-direction: column;">
+        <a onclick="closeMobileMenu()" href="#framework" style="padding: 13px 0; font-size: 15px; font-weight: 600; color: #1C1B18; border-bottom: 1px solid rgba(28,27,24,0.07);">Approach</a>
+        <a onclick="closeMobileMenu()" href="#faq" style="padding: 13px 0; font-size: 15px; font-weight: 600; color: #1C1B18; border-bottom: 1px solid rgba(28,27,24,0.07);">FAQ</a>
+        <a href="https://www.thepmohq.com" target="_blank" rel="noopener noreferrer" style="padding: 13px 0; font-size: 15px; font-weight: 600; color: #1C1B18; border-bottom: 1px solid rgba(28,27,24,0.07);">PMOHQ</a>
+        <a onclick="closeMobileMenu()" href="#about" style="padding: 13px 0; font-size: 15px; font-weight: 600; color: #1C1B18; border-bottom: 1px solid rgba(28,27,24,0.07);">About</a>
+        <a href="careers.html" style="padding: 13px 0; font-size: 15px; font-weight: 600; color: #1C1B18; border-bottom: 1px solid rgba(28,27,24,0.07);">Careers &amp; Referrals</a>
+        <a onclick="closeMobileMenu()" href="#intake" style="padding: 13px 0; font-size: 15px; font-weight: 700; color: #1F4FA0;">Contact</a>
+      </div>
+  </div>
+
+  <!-- HERO -->
+  <div id="top" style="max-width: 1180px; margin: 0 auto; padding: 48px 24px 40px; display: flex; flex-direction: column; gap: 20px;">
+    <h1 class="ago-hero-h1" style="margin: 0; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: clamp(21px, 6vw, 48px); line-height: 1.12; max-width: 100%; color: #1C1B18; text-transform: uppercase; letter-spacing: -0.01em; white-space: nowrap;">Let your<br class="ago-hero-break-1"/> <span style="display: inline-block; overflow: hidden; height: 1.15em; line-height: 1.15; vertical-align: top;"><span id="ago-rotate-word-inner" style="color: #1F4FA0;">momentum</span></span><br class="ago-hero-break-2"/> flow.</h1>
+    <div style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 0.3px; color: #1C1B18;">Build it. Govern it. Adapt it.</div>
+    <p style="margin: 0; font-size: 16.5px; line-height: 1.65; max-width: 600px; color: #4A4944;">AGOffice&trade; provides the resources, expertise and platform to help strategic and creative cross-functional teams bring both flexibility and structure to their work without slowing it down.</p>
+    <div style="margin-top: 6px;">
+      <a href="#intake" class="ago-btn-primary" style="background: #1F4FA0; color: #FAF9F5; padding: 16px 30px; font-weight: 700; font-size: 14.5px; letter-spacing: 0.3px; border-radius: 2px;">Work With Us &rarr;</a>
+    </div>
+  </div>
+
+  <!-- LOGO MARQUEE -->
+  <div style="border-top: 1px solid rgba(28,27,24,0.08); border-bottom: 1px solid rgba(28,27,24,0.08); background: #F1EFE8; padding: 30px 0;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 24px 18px;">
+      <div style="font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: #8A897F;">Join the agencies, brands &amp; corporations we've helped</div>
+    </div>
+    <div style="display: flex; overflow: hidden; width: 100%;">
+      <div class="ago-marquee-track" style="display: flex; gap: 56px; flex-shrink: 0; padding-right: 56px;">
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Microsoft</span>
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Mastercard</span>
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Target</span>
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Marriott</span>
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">UnitedHealthcare</span>
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Shell</span>
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">IHG</span>
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Synchrony</span>
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Church's Chicken</span>
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">SCANA Energy</span>
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Axon Studios</span>
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Pixafy</span>
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Microsoft</span>
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Mastercard</span>
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Target</span>
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Marriott</span>
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">UnitedHealthcare</span>
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Shell</span>
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">IHG</span>
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Synchrony</span>
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Church's Chicken</span>
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">SCANA Energy</span>
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Axon Studios</span>
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Pixafy</span>
+      </div>
+    </div>
+    <div style="max-width: 1180px; margin: 0 auto; padding: 18px 24px 0;">
+      <div style="font-size: 12.5px; line-height: 1.6; color: #8A897F;">Delivered through direct engagements and elite talent partners including Creative Circle, 24 Seven Talent, and Aquent.</div>
+    </div>
+  </div>
+
+  <!-- WHAT AGOFFICE CAN HELP MOVE -->
+  <div id="move" style="max-width: 1180px; margin: 0 auto; padding: 84px 24px 76px;">
+    <div style="max-width: 700px; margin-bottom: 30px;">
+      <h2 class="ago-section-h2" style="margin: 0 0 16px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 32px; line-height: 1.22; color: #1C1B18; text-transform: uppercase;">From GTM planning to<br/>managed services.</h2>
+      <p style="margin: 0; max-width: 680px; font-size: 15.5px; line-height: 1.7; color: #4A4944;">AGOffice&trade; has the people, infrastructure and approach to provide hands-on delivery leadership, an adaptable governance framework and a platform that powers it.</p>
+    </div>
+    <div class="ago-eyebrow">What AGOffice Can Help Move</div>
+    <div class="ago-spectrum-row" style="display: flex; align-items: center; flex-wrap: wrap; gap: 18px; font-size: 24px;">
+      <span class="ago-spectrum-item">Planning</span><span class="ago-spectrum-slash">/</span>
+      <span class="ago-spectrum-item">Projects</span><span class="ago-spectrum-slash">/</span>
+      <span class="ago-spectrum-item">Campaigns</span><span class="ago-spectrum-slash">/</span>
+      <span class="ago-spectrum-item">Creative</span><span class="ago-spectrum-slash">/</span>
+      <span class="ago-spectrum-item">Managed Services</span>
+    </div>
+  </div>
+
+  <!-- HOW WE DO IT -->
+  <div id="framework" style="border-top: 1px solid rgba(28,27,24,0.08); background: #1C1B18; color: #FAF9F5;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 84px 24px 76px;">
+      <div class="ago-eyebrow" style="color: #1F4FA0;">How We Do It</div>
+      <div style="max-width: 680px; margin-bottom: 20px;">
+        <h2 class="ago-section-h2" style="margin: 0 0 14px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 32px; color: #FAF9F5; text-transform: uppercase;">One practice. Three ways in.</h2>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: #DAD8D0;">Choose the level of support that fits how your work actually flows.</p>
+      </div>
+      <div class="ago-stack-row" style="display: flex; align-items: stretch; gap: 20px; margin-top: 36px;">
+        <div style="flex: 1; border-top: 3px solid rgba(250,249,245,0.14); padding: 22px 0 0;">
+          <div style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 17px; color: #FAF9F5; margin-bottom: 10px;">The Practitioner(s)</div>
+          <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #B9B7AE;">Add a fractional, fully remote, CAPM&reg; or PMP&reg;-certified project manager with delivery and governance expertise to your team.</p>
+        </div>
+        <div class="ago-plus" style="color: #1F4FA0;">+</div>
+        <div style="flex: 1; border-top: 3px solid rgba(250,249,245,0.14); padding: 22px 0 0;">
+          <div style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 17px; color: #FAF9F5; margin-bottom: 10px;">The Framework</div>
+          <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #B9B7AE;">Introduce an adaptable governance framework to your strategic and creative teams, designed to optimize their expertise.</p>
+        </div>
+        <div class="ago-plus" style="color: #1F4FA0;">+</div>
+        <div style="flex: 1; border-top: 3px solid rgba(250,249,245,0.14); padding: 22px 0 0;">
+          <div style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 17px; color: #FAF9F5; margin-bottom: 10px;">The Platform</div>
+          <p style="margin: 0 0 14px; font-size: 14px; line-height: 1.6; color: #B9B7AE;">Integrate PMOHQ&trade;, our proprietary governance solution. Built to sit directly on top of your existing tech stack, it adds a seamless layer of project control without disrupting how your work actually flows.</p>
+          <a href="https://www.thepmohq.com" target="_blank" rel="noopener noreferrer" class="ago-underline-link" style="font-weight: 700; font-size: 13.5px; color: #FAF9F5; border-bottom-color: rgba(250,249,245,0.4);"><span style="color: #1F4FA0;">&rarr;</span> Explore PMOHQ</a>
+        </div>
+      </div>
+      <div style="margin-top: 30px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.2px; color: #FAF9F5;">Start with what you need. Scale when you're ready. Adapt as it evolves.</div>
+    </div>
+  </div>
+
+  <!-- FAQs -->
+  <div id="faq" style="max-width: 900px; margin: 0 auto; padding: 84px 24px 60px;">
+    <h2 class="ago-section-h2" style="margin: 0 0 10px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 32px; color: #1C1B18; text-transform: uppercase;">FAQs</h2>
+    <div class="ago-eyebrow" style="margin-bottom: 36px; text-transform: none; letter-spacing: 0; font-size: 15px; font-weight: 700;">Answers to the most frequently asked questions about our practitioners' experience, our approach, and our ways of working.</div>
+
+    <div class="ago-faq-item" style="padding: 0; border-bottom: 1px solid rgba(28,27,24,0.1);">
+      <button onclick="toggleFaq(0)" style="width: 100%; text-align: left; background: none; border: none; padding: 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer;">
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 16px; color: #1C1B18;"><span style="color: #1F4FA0;">Q:</span> Have your practitioners set up a PMO from the ground up?</span>
+        <span id="faq-icon-0" style="flex-shrink: 0; display: flex; transition: transform .2s ease;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 4.5L7 9.5L12 4.5" stroke="#1F4FA0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </button>
+      <div id="faq-answer-0" style="display: none;">
+        <p style="margin: 0 0 24px; font-size: 14.5px; line-height: 1.65; color: #6B6A64;"><span style="color: #1F4FA0; font-weight: 700;">A:</span> Yes. Our practitioners have built customizable Project Management Offices from scratch, establishing the exact delivery structures and baseline governance required to steady scaling teams and keep operations moving predictably.</p>
+      </div>
+    </div>
+    <div class="ago-faq-item" style="padding: 0; border-bottom: 1px solid rgba(28,27,24,0.1);">
+      <button onclick="toggleFaq(1)" style="width: 100%; text-align: left; background: none; border: none; padding: 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer;">
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 16px; color: #1C1B18;"><span style="color: #1F4FA0;">Q:</span> Have your PMs managed large, cross-functional teams?</span>
+        <span id="faq-icon-1" style="flex-shrink: 0; display: flex; transition: transform .2s ease;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 4.5L7 9.5L12 4.5" stroke="#1F4FA0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </button>
+      <div id="faq-answer-1" style="display: none;">
+        <p style="margin: 0 0 24px; font-size: 14.5px; line-height: 1.65; color: #6B6A64;"><span style="color: #1F4FA0; font-weight: 700;">A:</span> Yes. Our practitioners have coordinated work across creative, marketing, communications, strategy, production, and operations, bringing multiple stakeholders, workstreams, and deadlines into a shared, unified delivery structure.</p>
+      </div>
+    </div>
+    <div class="ago-faq-item" style="padding: 0; border-bottom: 1px solid rgba(28,27,24,0.1);">
+      <button onclick="toggleFaq(2)" style="width: 100%; text-align: left; background: none; border: none; padding: 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer;">
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 16px; color: #1C1B18;"><span style="color: #1F4FA0;">Q:</span> Have your PMs governed complex campaigns and worked in regulated environments?</span>
+        <span id="faq-icon-2" style="flex-shrink: 0; display: flex; transition: transform .2s ease;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 4.5L7 9.5L12 4.5" stroke="#1F4FA0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </button>
+      <div id="faq-answer-2" style="display: none;">
+        <p style="margin: 0 0 24px; font-size: 14.5px; line-height: 1.65; color: #6B6A64;"><span style="color: #1F4FA0; font-weight: 700;">A:</span> Yes. Our practitioners have built delivery structures around complex timelines, multiple stakeholders, and shared launch dates from planning through production. This deep experience includes governing strict review and approval workflows for high-volume regulated communications where accuracy, visibility, and absolute control are critical to compliance.</p>
+      </div>
+    </div>
+    <div class="ago-faq-item" style="padding: 0; border-bottom: 1px solid rgba(28,27,24,0.1);">
+      <button onclick="toggleFaq(3)" style="width: 100%; text-align: left; background: none; border: none; padding: 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer;">
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 16px; color: #1C1B18;"><span style="color: #1F4FA0;">Q:</span> Have your practitioners worked across different industries and types of organizations?</span>
+        <span id="faq-icon-3" style="flex-shrink: 0; display: flex; transition: transform .2s ease;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 4.5L7 9.5L12 4.5" stroke="#1F4FA0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </button>
+      <div id="faq-answer-3" style="display: none;">
+        <p style="margin: 0 0 24px; font-size: 14.5px; line-height: 1.65; color: #6B6A64;"><span style="color: #1F4FA0; font-weight: 700;">A:</span> Yes. Our background spans creative agencies, growing brands, and global enterprise corporations. This diverse industry exposure is exactly what allowed us to build an adaptable approach that meets corporate compliance needs without choking creative execution.</p>
+      </div>
+    </div>
+    <div class="ago-faq-item" style="padding: 0; border-bottom: 1px solid rgba(28,27,24,0.1);">
+      <button onclick="toggleFaq(4)" style="width: 100%; text-align: left; background: none; border: none; padding: 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer;">
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 16px; color: #1C1B18;"><span style="color: #1F4FA0;">Q:</span> Have your PMs successfully optimized or improved an existing workflow?</span>
+        <span id="faq-icon-4" style="flex-shrink: 0; display: flex; transition: transform .2s ease;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 4.5L7 9.5L12 4.5" stroke="#1F4FA0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </button>
+      <div id="faq-answer-4" style="display: none;">
+        <p style="margin: 0 0 24px; font-size: 14.5px; line-height: 1.65; color: #6B6A64;"><span style="color: #1F4FA0; font-weight: 700;">A:</span> Yes. We don't tear down what works. Our PMs specialize in auditing existing friction points and introducing our adaptable governance framework to seamlessly streamline approvals, unlock bandwidth, and eliminate delivery bottlenecks.</p>
+      </div>
+    </div>
+    <div class="ago-faq-item" style="padding: 0; border-bottom: 1px solid rgba(28,27,24,0.1);">
+      <button onclick="toggleFaq(5)" style="width: 100%; text-align: left; background: none; border: none; padding: 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer;">
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 16px; color: #1C1B18;"><span style="color: #1F4FA0;">Q:</span> Can your practitioners work with the tools and systems we already use?</span>
+        <span id="faq-icon-5" style="flex-shrink: 0; display: flex; transition: transform .2s ease;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 4.5L7 9.5L12 4.5" stroke="#1F4FA0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </button>
+      <div id="faq-answer-5" style="display: none;">
+        <p style="margin: 0 0 24px; font-size: 14.5px; line-height: 1.65; color: #6B6A64;"><span style="color: #1F4FA0; font-weight: 700;">A:</span> Absolutely. We do not require you to migrate your team. Our proprietary solution, PMOHQ&trade;, is engineered to sit directly on top of your existing tech stack (Asana, Jira, Monday, etc.), adding an executive layer of project control without forcing your teams to learn a new tool.</p>
+      </div>
+    </div>
+    <div class="ago-faq-item" style="padding: 0; border-bottom: 1px solid rgba(28,27,24,0.1);">
+      <button onclick="toggleFaq(6)" style="width: 100%; text-align: left; background: none; border: none; padding: 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer;">
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 16px; color: #1C1B18;"><span style="color: #1F4FA0;">Q:</span> Do we have to use all three options, or can we pick just one?</span>
+        <span id="faq-icon-6" style="flex-shrink: 0; display: flex; transition: transform .2s ease;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 4.5L7 9.5L12 4.5" stroke="#1F4FA0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </button>
+      <div id="faq-answer-6" style="display: none;">
+        <p style="margin: 0 0 24px; font-size: 14.5px; line-height: 1.65; color: #6B6A64;"><span style="color: #1F4FA0; font-weight: 700;">A:</span> You have total flexibility. "Three ways in" means you can deploy an embedded Practitioner, adopt just the Framework to structure your internal teams, utilize the Platform standalone, or combine them for a fully managed PMO solution.</p>
+      </div>
+    </div>
+    <div class="ago-faq-item" style="padding: 0; border-bottom: 1px solid rgba(28,27,24,0.1);">
+      <button onclick="toggleFaq(7)" style="width: 100%; text-align: left; background: none; border: none; padding: 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer;">
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 16px; color: #1C1B18;"><span style="color: #1F4FA0;">Q:</span> What is the typical commitment required for a Practitioner?</span>
+        <span id="faq-icon-7" style="flex-shrink: 0; display: flex; transition: transform .2s ease;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 4.5L7 9.5L12 4.5" stroke="#1F4FA0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </button>
+      <div id="faq-answer-7" style="display: none;">
+        <p style="margin: 0 0 24px; font-size: 14.5px; line-height: 1.65; color: #6B6A64;"><span style="color: #1F4FA0; font-weight: 700;">A:</span> We provide ultimate agility. Our fractional, fully remote project managers are built to plug directly into your existing ecosystem, whether you need rapid execution for a short-term sprint or ongoing governance for a long-term engagement.</p>
+      </div>
+    </div>
+    <div class="ago-faq-item" style="padding: 0; border-bottom: none;">
+      <button onclick="toggleFaq(8)" style="width: 100%; text-align: left; background: none; border: none; padding: 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer;">
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 16px; color: #1C1B18;"><span style="color: #1F4FA0;">Q:</span> How quickly can a Practitioner embed into our team?</span>
+        <span id="faq-icon-8" style="flex-shrink: 0; display: flex; transition: transform .2s ease;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 4.5L7 9.5L12 4.5" stroke="#1F4FA0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </button>
+      <div id="faq-answer-8" style="display: none;">
+        <p style="margin: 0 0 24px; font-size: 14.5px; line-height: 1.65; color: #6B6A64;"><span style="color: #1F4FA0; font-weight: 700;">A:</span> We typically integrate a project manager into your workflow within 7&ndash;10 business days. This brief alignment window ensures your designated practitioner is fully aligned with your business model, target objectives, and team dynamics from day one.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div id="about" style="border-top: 1px solid rgba(28,27,24,0.08); background: #F1EFE8;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 84px 24px 76px;">
+      <div class="ago-grid-2" style="display: grid; grid-template-columns: 0.6fr 1fr; gap: 44px; align-items: start;">
+        <div>
+          <div class="ago-eyebrow">About</div>
+          <h2 class="ago-section-h2" style="margin: 0; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 28px; color: #1C1B18; text-transform: uppercase; line-height: 1.3;">The practice is built on practice.</h2>
+        </div>
+        <div>
+          <div style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 24px; color: #1C1B18; margin-bottom: 2px;">Maya Anders, BFA, PMP&reg;</div>
+          <div style="font-size: 13.5px; font-weight: 700; letter-spacing: 0.3px; text-transform: uppercase; color: #1F4FA0; margin-bottom: 18px;">Founder &amp; Principal, AGOffice&trade;</div>
+          <p style="margin: 0 0 22px; font-size: 16px; line-height: 1.65; color: #1C1B18;">12 years of agency and industry experience with 8+ years of dedicated project management and governance experience, overseeing the delivery of campaigns, projects and managed services for creative agencies, brands and global corporations.</p>
+          <a href="https://mayathepm.github.io/Maya-Anders/" target="_blank" rel="noopener noreferrer" class="ago-underline-link" style="font-weight: 700; font-size: 15px; color: #1C1B18;"><span style="color: #1F4FA0;">&rarr;</span> View Maya's Work</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FINAL INVITATION + INTAKE FORM -->
+  <div id="intake" style="background: #1C1B18; color: #FAF9F5; padding: 88px 0;">
+    <div style="max-width: 780px; margin: 0 auto; padding: 0 24px;">
+      <div class="ago-eyebrow" style="color: #1F4FA0;">Work With Us</div>
+      <h2 class="ago-section-h2" style="margin: 0 0 14px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 34px; color: #FAF9F5; text-transform: uppercase;">What does your work need?</h2>
+      <p style="margin: 0 0 8px; font-size: 15.5px; line-height: 1.6; color: #DAD8D0; max-width: 560px;">If delivery is getting stuck, governance isn't keeping pace, or your team needs another layer of support, let's pull up for a 15-minute 1:1 or group chat to talk through what's going on.</p>
+      <p style="margin: 0 0 36px; font-size: 15.5px; font-weight: 700; line-height: 1.6; color: #FAF9F5;">But first, tell us what you think you need.</p>
+
+      <form action="https://formspree.io/f/mgavnpbg" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+        <div class="ago-form-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <div>
+            <label class="ago-label" style="color: #B9B7AE;" for="ago-name">Name</label>
+            <input class="ago-field" id="ago-name" name="name" type="text" placeholder="Jordan Rivera" />
+          </div>
+          <div>
+            <label class="ago-label" style="color: #B9B7AE;" for="ago-email">Work Email</label>
+            <input class="ago-field" id="ago-email" name="email" type="email" placeholder="jordan@company.com" />
+          </div>
+          <div>
+            <label class="ago-label" style="color: #B9B7AE;" for="ago-company">Company</label>
+            <input class="ago-field" id="ago-company" name="company" type="text" placeholder="Company name" />
+          </div>
+          <div>
+            <label class="ago-label" style="color: #B9B7AE;" for="ago-role">Role / Title</label>
+            <input class="ago-field" id="ago-role" name="role" type="text" placeholder="Head of Marketing" />
+          </div>
+          <div>
+            <label class="ago-label" style="color: #B9B7AE;" for="ago-teamsize">Team Size</label>
+            <select class="ago-field" id="ago-teamsize" name="teamsize">
+              <option>1&ndash;5</option>
+              <option>6&ndash;15</option>
+              <option>16&ndash;50</option>
+              <option>50+</option>
+            </select>
+          </div>
+          <div>
+            <label class="ago-label" style="color: #B9B7AE;" for="ago-timeline">Ideal Start Timeline</label>
+            <select class="ago-field" id="ago-timeline" name="timeline">
+              <option>ASAP</option>
+              <option>Within 30 days</option>
+              <option>1&ndash;3 months</option>
+              <option>Just exploring</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="ago-label" style="color: #B9B7AE;" for="ago-needs">What do you think you need? (No wrong answer &mdash; that's what the Pull Up is for.)</label>
+          <select class="ago-field" id="ago-needs" name="needs">
+            <option>Resources</option>
+            <option>Frameworks / Governance Tools</option>
+            <option>Expertise / Advisory Support</option>
+            <option>Platform + Structure</option>
+            <option>I'm not sure yet</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div>
+          <label class="ago-label" style="color: #B9B7AE;" for="ago-tools">Current Tech Stack</label>
+          <input class="ago-field" id="ago-tools" name="tools" type="text" placeholder="Asana, Monday, Workfront, Smartsheet..." />
+        </div>
+        <div>
+          <label class="ago-label" style="color: #B9B7AE;" for="ago-pain">Biggest Delivery Pain Point</label>
+          <textarea class="ago-field" id="ago-pain" name="pain" rows="4" placeholder="Where does work actually stall right now?" style="resize: vertical;"></textarea>
+        </div>
+        <button type="submit" class="ago-submit ago-btn-primary" style="align-self: flex-start; background: #1F4FA0; color: #FAF9F5; border: none; padding: 16px 30px; font-weight: 700; font-size: 15px; border-radius: 2px; cursor: pointer; margin-top: 6px;">Let's Pull Up &rarr;</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="background: #1C1B18; color: #FAF9F5; padding: 60px 0 32px; border-top: 1px solid rgba(250,249,245,0.14);">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 24px;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 36px; padding-bottom: 40px; border-bottom: 1px solid rgba(250,249,245,0.14);">
+        <div style="max-width: 360px; display: flex; flex-direction: column; gap: 6px;">
+          <a href="#top" style="display: flex; align-items: baseline; line-height: 1; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.01em; color: #FAF9F5;">AGOffice<span style="color: #1F4FA0;">.</span></a>
+          <div style="font-size: 11.5px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: #1F4FA0;">Adaptable Governance Office&trade;</div>
+          <p style="margin: 0; font-size: 13.5px; line-height: 1.6; color: #B9B7AE;">Project &amp; PMO Governance for Strategic &amp; Creative Teams.</p>
+          <a href="#" onclick="return false;" style="font-size: 13px; font-weight: 700; color: #DAD8D0; cursor: default; line-height: 1.5;"><span style="color: #1F4FA0;">&rarr;</span> Download the AGOffice&trade; Pre-Onboarding Deck<br/><span style="font-weight: 400; color: #B9B7AE;">an expanded overview of how AGOffice&trade; works &amp; what to expect when you work with us.</span> <span style="font-size: 10.5px; font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase; color: #1F4FA0;">(Coming Soon)</span></a>
+        </div>
+        <div style="display: flex; gap: 64px; flex-wrap: wrap;">
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="font-size: 10.5px; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; color: #8A897F; margin-bottom: 4px;">AGOffice</div>
+            <a class="ago-navlink" href="#framework" style="font-size: 13.5px; color: #DAD8D0;">Approach</a>
+            <a class="ago-navlink" href="#faq" style="font-size: 13.5px; color: #DAD8D0;">FAQ</a>
+            <a class="ago-navlink" href="#about" style="font-size: 13.5px; color: #DAD8D0;">About</a>
+            <a class="ago-navlink" href="careers.html" style="font-size: 13.5px; color: #DAD8D0;">Careers &amp; Referrals</a>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="font-size: 10.5px; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; color: #8A897F; margin-bottom: 4px;">Connect</div>
+            <a class="ago-navlink" href="mailto:mayathepm@gmail.com" style="font-size: 13.5px; color: #DAD8D0;">Email</a>
+            <a class="ago-navlink" href="https://linkedin.com/in/mayaanders" style="font-size: 13.5px; color: #DAD8D0;">LinkedIn</a>
+            <a class="ago-navlink" href="https://www.thepmohq.com" style="font-size: 13.5px; color: #DAD8D0;">PMOHQ</a>
+          </div>
+        </div>
+      </div>
+      <div style="padding-top: 22px; font-size: 12.5px; color: #8A897F;">&copy; 2026 The AGOffice&trade;. Adaptable Governance Office&trade;.</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function toggleMobileMenu() {
+    var menu = document.getElementById('ago-mobile-menu');
+    var isOpen = menu.style.display === 'flex';
+    menu.style.display = isOpen ? 'none' : 'flex';
+  }
+  function closeMobileMenu() {
+    document.getElementById('ago-mobile-menu').style.display = 'none';
+  }
+
+  function toggleFaq(n) {
+    var ans = document.getElementById('faq-answer-' + n);
+    var wasOpen = ans.style.display === 'block';
+    for (var i = 0; i < 9; i++) {
+      document.getElementById('faq-answer-' + i).style.display = 'none';
+      document.getElementById('faq-icon-' + i).style.transform = 'rotate(0deg)';
+    }
+    if (!wasOpen) {
+      ans.style.display = 'block';
+      document.getElementById('faq-icon-' + n).style.transform = 'rotate(180deg)';
+    }
+  }
+
+  (function () {
+    var words = ['momentum', 'creativity', 'strategy', 'delivery', 'framework'];
+    var i = 0;
+    var el = document.getElementById('ago-rotate-word-inner');
+    if (!el) return;
+    function cycle() {
+      setTimeout(function () {
+        el.style.opacity = '0';
+        setTimeout(function () {
+          i = (i + 1) % words.length;
+          el.textContent = words[i];
+          el.style.opacity = '1';
+          cycle();
+        }, 260);
+      }, 1200);
+    }
+    cycle();
+  })();
+</script>
+</body>
+</html>
