@@ -73,7 +73,7 @@
         var live = published().filter(function (p) { return p.series === id && p.seriesNumber === i; })[0];
         ticks += live
           ? '<a class="tick" href="' + postHref(live) + '">' + pad(i) + '<small>Live</small></a>'
-          : '<div class="tick">' + pad(i) + '<small>Soon</small></div>';
+          : '<div class="tick">' + pad(i) + '<small>Coming soon</small></div>';
       }
       return '<div class="series-band"><div class="wrap" style="padding-top:44px; padding-bottom:44px;">' +
         '<div class="ago-eyebrow" style="color:#8FB0E8; margin-bottom:8px;">' + s.name + '</div>' +
