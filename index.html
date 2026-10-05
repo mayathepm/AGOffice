@@ -37,6 +37,8 @@
   .ago-stat-tile { padding: 24px 0 0; border-top: 3px solid #1F4FA0; }
   #ago-rotate-word-inner { display: block; transition: opacity 0.26s ease; }
   .ago-hero-break-1, .ago-hero-break-2 { display: none; }
+  .ago-footer-break { display: none; }
+  .ago-footer-tag { white-space: nowrap; }
   .ago-nav-sub { font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #1F4FA0; line-height: 1; white-space: nowrap; }
   .ago-social { color: #DAD8D0; display: inline-flex; transition: color .15s ease; }
   .ago-social:hover { color: #1F4FA0; }
@@ -58,6 +60,12 @@
     .ago-hero-h1 { font-size: clamp(28px, 9vw, 38px) !important; }
     .ago-nav-sub { font-size: 8px; letter-spacing: 1.2px; }
     .ago-hero-break-1, .ago-hero-break-2 { display: block; }
+  }
+  @media (max-width: 860px) and (orientation: portrait) {
+    .ago-footer-break { display: block; }
+    .ago-footer-tag { white-space: normal; }
+    .ago-footer-lockup { gap: 14px !important; }
+    .ago-footer-lockup .ago-nav-sub { letter-spacing: 1.17px; }
   }
 </style>
 </head>
@@ -373,9 +381,13 @@
   <div style="background: #1C1B18; color: #FAF9F5; padding: 60px 0 32px; border-top: 1px solid rgba(250,249,245,0.14);">
     <div style="max-width: 1180px; margin: 0 auto; padding: 0 24px;">
       <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 36px; padding-bottom: 40px; border-bottom: 1px solid rgba(250,249,245,0.14);">
-        <div style="max-width: 360px; display: flex; flex-direction: column; gap: 6px;">
-          <a href="#top" style="display: flex; align-items: baseline; line-height: 1; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.01em; color: #FAF9F5;">AGOffice<span style="color: #1F4FA0;">.</span></a>
-          <p style="margin: 0; font-size: 13.5px; line-height: 1.6; color: #B9B7AE;">Workflow Governance Solutions for Strategic &amp; Creative Teams.</p>
+        <div style="max-width: 460px; display: flex; flex-direction: column; gap: 6px;">
+          <div class="ago-footer-lockup" style="display: flex; align-items: center; gap: 16px;">
+            <a href="#top" style="display: flex; align-items: baseline; line-height: 1; flex-shrink: 0; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.01em; color: #FAF9F5;">AGOffice<span style="color: #1F4FA0;">.</span></a>
+            <div class="ago-nav-divider" style="background: rgba(250,249,245,0.25);"></div>
+            <div class="ago-nav-sub">Adaptable Governance Office</div>
+          </div>
+          <p class="ago-footer-tag" style="margin: 0; font-size: 13.5px; line-height: 1.6; color: #B9B7AE;">Workflow Governance Solutions for Strategic and<br class="ago-footer-break"/> Creative Teams.</p>
           <p style="margin: 0; font-size: 13.5px; font-weight: 700; line-height: 1.6; color: #DAD8D0;">Where Your Work Flows.</p>
           <!-- ARCHIVED: Pre-Onboarding Deck link (may reuse elsewhere)
           <a href="#" onclick="return false;" style="font-size: 13px; font-weight: 700; color: #DAD8D0; cursor: default; line-height: 1.5;"><span style="color: #1F4FA0;">&rarr;</span> Download the AGOffice&trade; Pre-Onboarding Deck<br/><span style="font-weight: 400; color: #B9B7AE;">an expanded overview of how AGOffice&trade; works &amp; what to expect when you work with us.</span> <span style="font-size: 10.5px; font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase; color: #1F4FA0;">(Coming Soon)</span></a>
@@ -398,7 +410,7 @@
             <a class="ago-navlink" href="mailto:mayathepm@gmail.com" style="font-size: 13.5px; color: #DAD8D0;">Contact</a>
             <a class="ago-navlink" href="https://linkedin.com/in/mayaanders" style="font-size: 13.5px; color: #DAD8D0;">LinkedIn</a>
             <a class="ago-navlink" href="https://www.thepmohq.com" style="font-size: 13.5px; color: #DAD8D0;">PMOHQ</a>
-            <a class="ago-navlink" href="blog/" style="font-size: 13.5px; color: #DAD8D0;">Blog</a>
+            <span style="font-size: 13.5px; color: #8A897F; cursor: default;" aria-disabled="true">Blog</span>
           </div>
           <div style="display: flex; flex-direction: column; gap: 10px;">
             <div style="font-size: 10.5px; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; color: #8A897F; margin-bottom: 4px;">Legal</div>
