@@ -41,7 +41,7 @@ window.BLOG = {
                  Set active:false (or delete the launch line) to retire it.      */
   series: {
     'mayas-lessons-learned': {
-      name: 'Maya’s Lessons Learned',
+      name: 'Lessons Learned',
       theme: '8 Years. 8 Lessons.',
       total: 8,
       showLabel: true,
@@ -76,7 +76,7 @@ window.BLOG = {
       slug: 'what-is-governance',
       title: 'What Is Governance?',
       date: '2026-10-05',                                  // placeholder publish date
-      categories: ['governance', 'lessons-learned'],
+      categories: ['governance'],
       author: 'maya',
       image: null,                                         // null = branded placeholder art
       imageAlt: '',
