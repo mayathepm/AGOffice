@@ -13,6 +13,7 @@
    ===================================================================== */
 window.BLOG = {
 
+  /* ---- page-level text for the index (no hard-coded series/brand strings in the template) ---- */
   config: {
     eyebrow: 'The AGOffice™',
     title: 'Blog',
@@ -20,6 +21,7 @@ window.BLOG = {
     emptyMessage: 'More posts will appear here as they publish.'
   },
 
+  /* ---- 1. CATEGORIES: permanent topics. Key = slug used by posts. ---- */
   categories: {
     'governance':            { label: 'Governance' },
     'project-management':    { label: 'Project Management' },
@@ -30,6 +32,13 @@ window.BLOG = {
     'lessons-learned':       { label: 'Lessons Learned' }
   },
 
+  /* ---- 2. SERIES: optional editorial collections. Key = series id used by posts. ----
+     name        shown as the series label
+     theme       the series headline (shown in the launch band)
+     total       default "of N" for numbering (a post can override with seriesTotal)
+     showLabel   show the small "NAME 01 / 08" label on cards and posts (kept after launch)
+     launch      { active: true }  = show the prominent band on the blog index.
+                 Set active:false (or delete the launch line) to retire it.      */
   series: {
     'mayas-lessons-learned': {
       name: 'Lessons Learned',
@@ -40,32 +49,41 @@ window.BLOG = {
     }
   },
 
+  /* ---- AUTHORS ---- */
   authors: {
     maya: {
       name: 'Maya Anders',
       role: 'Founder & Principal, AGOffice™',
-      image: null,
+      image: null,        // e.g. 'img/authors/maya.jpg'; falls back to initials
       initials: 'MA'
     }
   },
 
+  /* ---- EVERGREEN CTA: written once, appended to every post ---- */
   evergreenCta: {
     heading: 'Keep the conversation going',
-    text: 'Join us on <a class="in" href="https://www.instagram.com/theagoffice" target="_blank" rel="noopener noreferrer">Instagram</a> &amp; <a class="in" href="https://www.linkedin.com/company/theadaptablegovernanceoffice/" target="_blank" rel="noopener noreferrer">LinkedIn</a> as we explore what governance is, how it works, and how it can adapt to the way your work flows.'
+    text: 'Join us on <a class="in" href="https://www.instagram.com/theagoffice" target="_blank" rel="noopener noreferrer">Instagram</a> &amp; <a class="in" href="https://www.linkedin.com/company/agoffice-adaptable-governance-office/" target="_blank" rel="noopener noreferrer">LinkedIn</a> as we explore what governance is, how it works, and how it can adapt to the way your work flows.'
   },
 
+  /* ---- POSTS ----
+     Required:  slug, title, date (YYYY-MM-DD), categories [slugs], author, excerpt, body
+     Optional:  image, imageAlt, featured, topicCta,
+                series (series id), seriesNumber, seriesTotal
+     A post with no `series` is a regular post. Nothing else is needed.
+     Body blocks:  p | lead | h (with n) | close     (text may contain inline HTML)   */
   posts: [
     {
       slug: 'what-is-governance',
       title: 'What Is Governance?',
-      date: '2026-10-05',
+      date: '2026-10-05',                                  // placeholder publish date
       categories: ['governance'],
       author: 'maya',
-      image: null,
+      image: null,                                         // null = branded placeholder art
       imageAlt: '',
-      featured: true,
+      featured: true,                                      // pins to the featured slot on the index
       series: 'mayas-lessons-learned',
       seriesNumber: 1,
+      // seriesTotal: 8,                                   // optional override of the series default
       excerpt: 'Governance is the only domain applied throughout the entire project lifecycle, and the only one that follows the work beyond delivery.',
       body: [
         { t: 'p', x: 'Over the course of my nearly eight-year project management career, and specifically while studying for the PMP®, one of the key lessons I came to understand was that governance is the only domain applied throughout the entire project lifecycle, and the only one that follows the work beyond delivery.' },
