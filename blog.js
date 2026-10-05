@@ -40,7 +40,7 @@
   function art(p, cls) {
     var inner = p.image
       ? '<img src="' + p.image + '" alt="' + (p.imageAlt || '') + '">'
-      : '<span class="art-num">' + (p.seriesNumber ? pad(p.seriesNumber) : '') + '</span><span class="art-tag">Featured image placeholder</span>';
+      : '<span class="art-num">' + (p.seriesNumber ? pad(p.seriesNumber) : '') + '</span>';
     return '<div class="art ' + (cls || '') + '">' + inner + '</div>';
   }
   function avatar(a) {
@@ -119,7 +119,7 @@
       '<div class="wrap" style="padding-bottom:96px;">' +
         (rest.length
           ? '<div class="ago-eyebrow archive-label">' + B.config.archiveLabel + '</div><div class="grid">' + cards + '</div>'
-          : '<div class="empty" style="margin-top:28px;">' + B.config.emptyMessage + '</div>') +
+          : '') +
       '</div>';
     document.title = B.config.title + ' — The AGOffice';
   }
