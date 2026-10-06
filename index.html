@@ -2,471 +2,334 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The AGOffice — Adaptable Governance Office</title>
-<meta name="description" content="AGOffice provides the resources, expertise, and platform to help strategic and creative teams bring flexibility and structure to their work without slowing it down.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AGOffice + PMOHQ — One Way In</title>
+<meta name="description" content="One way in. Two ways of working. Choose AGOffice or PMOHQ.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  body { margin: 0; font-family: 'Onest', system-ui, sans-serif; background: #FAF9F5; color: #1C1B18; }
-  a { color: inherit; text-decoration: none; }
-  #top, #move, #framework, #faq, #about, #intake { scroll-margin-top: 84px; }
-  input, textarea, select, button { font-family: inherit; }
-  .ago-navlink { transition: color .15s ease; }
-  .ago-navlink:hover { color: #1F4FA0; }
-  .ago-btn-primary { transition: transform .15s ease, box-shadow .15s ease; display: inline-block; }
-  .ago-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(28,27,24,0.18); }
-  .ago-underline-link { border-bottom: 2px solid #1C1B18; padding-bottom: 2px; transition: border-color .15s ease, color .15s ease; }
-  .ago-underline-link:hover { border-color: #1F4FA0; color: #1F4FA0; }
-  .ago-card { transition: transform .15s ease, box-shadow .15s ease; }
-  .ago-card:hover { transform: translateY(-3px); box-shadow: 0 14px 28px rgba(28,27,24,0.08); }
-  .ago-field { width: 100%; box-sizing: border-box; padding: 12px 14px; border: 1px solid rgba(28,27,24,0.18); border-radius: 2px; font-size: 14.5px; background: #FFFFFF; color: #1C1B18; }
-  .ago-field:focus { outline: none; border-color: #1F4FA0; }
-  .ago-label { display: block; font-size: 11.5px; font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase; color: #6B6A64; margin-bottom: 6px; }
-  @keyframes ago-marquee { from { transform: translateX(-50%); } to { transform: translateX(0); } }
-  .ago-marquee-track { animation: ago-marquee 34s linear infinite; }
-  .ago-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(28,27,24,0.18); }
-  .ago-eyebrow { font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #1F4FA0; margin-bottom: 12px; }
-  .ago-plus { flex-shrink: 0; font-family: 'Poppins', sans-serif; font-weight: 300; font-size: 30px; color: rgba(28,27,24,0.25); align-self: center; }
-  .ago-diagram-box { border: 1px solid rgba(28,27,24,0.14); background: #FFFFFF; border-radius: 2px; padding: 22px 26px; width: 100%; box-sizing: border-box; }
-  .ago-diagram-arrow { text-align: center; font-size: 20px; color: rgba(28,27,24,0.3); line-height: 1; padding: 2px 0; }
-  .ago-spectrum-item { font-family: 'Poppins', sans-serif; font-weight: 700; letter-spacing: 0.2px; }
-  .ago-spectrum-slash { color: rgba(28,27,24,0.25); font-weight: 300; }
-  .ago-faq-item { padding: 26px 0; border-bottom: 1px solid rgba(28,27,24,0.1); }
-  .ago-stat-tile { padding: 24px 0 0; border-top: 3px solid #1F4FA0; }
-  #ago-rotate-word-inner { display: block; transition: opacity 0.26s ease; }
-  .ago-hero-break-1, .ago-hero-break-2 { display: none; }
-  .ago-footer-break { display: none; }
-  .ago-footer-tag { white-space: nowrap; }
-  .ago-nav-sub { font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #1F4FA0; line-height: 1; white-space: nowrap; }
-  .ago-social { color: #DAD8D0; display: inline-flex; transition: color .15s ease; }
-  .ago-social:hover { color: #1F4FA0; }
-  .ago-nav-divider { width: 1px; height: 20px; background: rgba(28,27,24,0.15); flex-shrink: 0; }
-  @media (max-width: 860px) {
-    .ago-hide-mobile { display: none !important; }
-    .ago-mobile-center-tagline { display: none !important; } /* ARCHIVED: was block !important */
-    .ago-show-mobile { display: flex !important; }
-    .ago-grid-3 { grid-template-columns: 1fr !important; }
-    .ago-grid-4 { grid-template-columns: 1fr 1fr !important; }
-    .ago-grid-5 { grid-template-columns: 1fr 1fr !important; }
-    .ago-grid-2 { grid-template-columns: 1fr !important; }
-    .ago-section-h2 { font-size: 26px !important; }
-    .ago-form-grid { grid-template-columns: 1fr !important; }
-    .ago-stack-row { flex-direction: column !important; }
-    .ago-plus { transform: rotate(90deg); margin: 2px 0; }
-    .ago-spectrum-row { flex-direction: column !important; align-items: flex-start !important; gap: 8px !important; }
-    .ago-spectrum-slash { display: none; }
-    .ago-hero-h1 { font-size: clamp(28px, 9vw, 38px) !important; }
-    .ago-nav-sub { font-size: 8px; letter-spacing: 1.2px; }
-    .ago-hero-break-1, .ago-hero-break-2 { display: block; }
+  :root {
+    --ink: #1C1B18;
+    --cream: #FAF9F5;
+    --blue: #1F4FA0;
+    --blue-glow: #3C74E0;
+    --split: 50%;
   }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--ink); }
+  body { font-family: 'Onest', system-ui, sans-serif; overflow: hidden; }
+  a { color: inherit; text-decoration: none; }
+
+  .stage {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+  }
+
+  /* ---------- Panels ---------- */
+  .panel {
+    position: relative;
+    flex: 1 1 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    outline: none;
+    transition: flex-grow .9s cubic-bezier(.2,.8,.2,1), filter .6s ease;
+  }
+  .panel-ago { background: var(--cream); color: var(--ink); padding: 0 calc(clamp(68px, 8vw, 110px) / 2 + 28px) 0 32px; }
+  .panel-hq  { background: var(--ink);   color: var(--cream); padding: 0 32px 0 calc(clamp(68px, 8vw, 110px) / 2 + 28px); }
+
+  /* slow drifting light */
+  .glow {
+    position: absolute;
+    width: 90vmax; height: 90vmax;
+    left: 50%; top: 50%;
+    margin: -45vmax 0 0 -45vmax;
+    pointer-events: none;
+    animation: drift 22s ease-in-out infinite alternate;
+  }
+  .panel-ago .glow { background: radial-gradient(closest-side, rgba(31,79,160,.16), rgba(31,79,160,0) 70%); }
+  .panel-hq  .glow { background: radial-gradient(closest-side, rgba(60,116,224,.30), rgba(60,116,224,0) 70%); animation-duration: 26s; animation-direction: alternate-reverse; }
+  @keyframes drift {
+    from { transform: translate3d(-14%, -10%, 0) scale(1); }
+    to   { transform: translate3d(14%, 12%, 0) scale(1.15); }
+  }
+
+  /* fine grid lines for a "governance" feel, barely there */
+  .grid {
+    position: absolute; inset: 0; pointer-events: none; opacity: .5;
+    background-image:
+      linear-gradient(to right, currentColor 1px, transparent 1px);
+    background-size: 12.5% 100%;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 30%, #000 70%, transparent);
+            mask-image: linear-gradient(to bottom, transparent, #000 30%, #000 70%, transparent);
+    opacity: .06;
+  }
+
+  /* ---------- Content ---------- */
+  .content {
+    color: inherit; text-decoration: none; cursor: pointer; -webkit-tap-highlight-color: transparent;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 22px;
+    padding: 0 32px;
+    transition: transform .9s cubic-bezier(.2,.8,.2,1), opacity .6s ease;
+  }
+  .eyebrow {
+    font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--blue);
+  }
+  .panel-hq .eyebrow { color: #7FA6F0; }
+
+  .wordmark {
+    display: flex; align-items: baseline;
+    font-family: 'Poppins', sans-serif; font-weight: 800; line-height: 1;
+    font-size: clamp(36px, 5.6vw, 92px);
+    letter-spacing: -0.02em;
+  }
+  .wordmark .dot { color: var(--blue); }
+  .wordmark sup { font-size: .2em; font-weight: 600; margin-left: .15em; align-self: flex-start; margin-top: .35em; letter-spacing: 0; opacity: .7; }
+  .wm-hq { font-weight: 700; }                      /* matches the PMOHQ logo: Poppins 700 */
+  .panel-hq .wordmark .dot { color: #1E4FA0; }       /* brand dot colour from the PMOHQ app */
+
+  .tagline {
+    margin: 0;
+    font-family: 'Poppins', sans-serif; font-weight: 600;
+    font-size: clamp(15px, 1.7vw, 24px);
+    letter-spacing: .01em;
+    max-width: 18em;
+    line-height: 1.35;
+    opacity: .85;
+  }
+  .enter {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+    padding-bottom: 6px;
+    border-bottom: 2px solid currentColor;
+    opacity: 0; transform: translateY(8px);
+    transition: opacity .5s ease, transform .5s ease, gap .3s ease;
+  }
+  .enter .arr { transition: transform .3s ease; }
+
+  /* ---------- Interaction (hover / focus expands that side) ---------- */
+  @media (hover: hover) and (min-width: 861px) {
+    .stage:has(.panel-ago .content:hover, .panel-ago:focus-within) .panel-ago,
+    .stage:has(.panel-hq .content:hover,  .panel-hq:focus-within)  .panel-hq { flex-grow: 1.35; }
+    .stage:has(.panel-ago .content:hover, .panel-ago:focus-within) .panel-hq,
+    .stage:has(.panel-hq .content:hover,  .panel-hq:focus-within)  .panel-ago { filter: brightness(.9) saturate(.9); }
+    .stage:has(.panel-ago .content:hover, .panel-ago:focus-within) .plus { left: 57.4%; }
+    .stage:has(.panel-hq .content:hover,  .panel-hq:focus-within)  .plus { left: 42.6%; }
+    .content:hover .enter, .panel:focus-within .enter { opacity: 1; transform: none; }
+    .content:hover .enter .arr, .panel:focus-within .enter .arr { transform: translateX(6px); }
+    .content:hover, .panel:focus-within .content { transform: scale(1.04); }
+    .stage:has(.content:hover) .plus .bar, .stage:has(.panel:focus-within) .plus .bar { background: #fff; }
+    .stage:has(.content:hover) .plus .ring, .stage:has(.panel:focus-within) .plus .ring { transform: scale(1.12) rotate(90deg); }
+  }
+  /* touch + small screens: CTA always visible */
+  @media (hover: none), (max-width: 860px) {
+    .panel .content > .enter { opacity: 1; transform: none; }
+  }
+  .panel:focus-within { box-shadow: inset 0 0 0 3px var(--blue-glow); }
+
+  /* ---------- The + ---------- */
+  .plus {
+    position: absolute; z-index: 5;
+    left: 50%; top: 50%;
+    width: clamp(68px, 8vw, 110px); height: clamp(68px, 8vw, 110px);
+    margin: calc(clamp(68px, 8vw, 110px) / -2) 0 0 calc(clamp(68px, 8vw, 110px) / -2);
+    pointer-events: none;
+    transition: left .9s cubic-bezier(.2,.8,.2,1), top .9s cubic-bezier(.2,.8,.2,1);
+  }
+  .plus .ring {
+    position: absolute; inset: 0; border-radius: 50%;
+    background: var(--blue);
+    box-shadow: 0 0 0 6px rgba(250,249,245,.14), 0 18px 60px rgba(31,79,160,.55), 0 0 90px rgba(60,116,224,.35);
+    transition: transform .7s cubic-bezier(.2,.8,.2,1);
+    animation: pulse 4.5s ease-in-out infinite;
+  }
+  .plus .bar {
+    position: absolute; left: 50%; top: 50%; background: var(--cream); border-radius: 2px;
+    transition: background .3s ease;
+  }
+  .plus .bar.h { width: 36%; height: 4px; margin: -2px 0 0 -18%; }
+  .plus .bar.v { width: 4px; height: 36%; margin: -18% 0 0 -2px; }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 6px rgba(250,249,245,.14), 0 18px 60px rgba(31,79,160,.55), 0 0 90px rgba(60,116,224,.30); }
+    50%      { box-shadow: 0 0 0 14px rgba(250,249,245,.06), 0 18px 60px rgba(31,79,160,.55), 0 0 120px rgba(60,116,224,.50); }
+  }
+
+  /* ---------- Top line ---------- */
+  .kicker {
+    position: absolute; z-index: 6; left: 0; right: 0; bottom: 34px;
+    text-align: center; pointer-events: none;
+    font-size: 11.5px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--cream); mix-blend-mode: difference;
+  }
+
+  /* ---------- Film grain ---------- */
+  .grain {
+    position: absolute; inset: 0; z-index: 8; pointer-events: none; opacity: .16; mix-blend-mode: soft-light;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 .9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    animation: grain 1.2s steps(6) infinite;
+  }
+  @keyframes grain {
+    0% { transform: translate(0,0); } 20% { transform: translate(-3%, 2%); } 40% { transform: translate(2%, -3%); }
+    60% { transform: translate(-2%, -1%); } 80% { transform: translate(3%, 3%); } 100% { transform: translate(0,0); }
+  }
+
+  /* ---------- Entrance ---------- */
+  .content > * { opacity: 0; animation: rise 1.1s cubic-bezier(.2,.8,.2,1) forwards; }
+  .content > .enter { animation: none; opacity: 0; transform: translateY(8px); }  /* revealed by hover / touch rules */
+  .panel-ago .content > :nth-child(1) { animation-delay: .35s; }
+  .panel-ago .content > :nth-child(2) { animation-delay: .55s; }
+  .panel-ago .content > :nth-child(3) { animation-delay: .8s; }
+  .panel-hq  .content > :nth-child(1) { animation-delay: .45s; }
+  .panel-hq  .content > :nth-child(2) { animation-delay: .65s; }
+  .panel-hq  .content > :nth-child(3) { animation-delay: .9s; }
+  @keyframes rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+  .panel-ago { animation: wipeL 1.2s cubic-bezier(.2,.8,.2,1) both; }
+  .panel-hq  { animation: wipeR 1.2s cubic-bezier(.2,.8,.2,1) both; }
+  @keyframes wipeL { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+  @keyframes wipeR { from { clip-path: inset(0 0 0 100%); } to { clip-path: inset(0 0 0 0); } }
+  .plus { animation: pop 1s .9s cubic-bezier(.2,1.4,.3,1) both; }
+  @keyframes pop { from { opacity: 0; transform: scale(.2) rotate(-90deg); } to { opacity: 1; transform: none; } }
+  .kicker { opacity: 0; animation: rise 1s 1.3s ease forwards; }
+
+  /* ---------- Mobile: stack top / bottom ---------- */
   @media (max-width: 860px) and (orientation: portrait) {
-    .ago-footer-break { display: block; }
-    .ago-footer-tag { white-space: normal; }
-    .ago-footer-lockup { gap: 14px !important; }
-    .ago-footer-lockup .ago-nav-sub { letter-spacing: 1.17px; }
+    .stage { flex-direction: column; }
+    .panel { flex: 1 1 0; padding: 0 24px !important; }
+    .panel-ago { animation-name: wipeT; }
+    .panel-hq  { animation-name: wipeB; }
+    @keyframes wipeT { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0 0 0 0); } }
+    @keyframes wipeB { from { clip-path: inset(100% 0 0 0); } to { clip-path: inset(0 0 0 0); } }
+    .content { gap: 14px; }
+    .wordmark { font-size: clamp(40px, 13vw, 64px); }
+    .tagline { font-size: 16px; }
+    .eyebrow { font-size: 10.5px; letter-spacing: 2.4px; }
+    .enter { font-size: 11.5px; }
+    /* the line becomes a slim bar across the top */
+    .kicker { position: fixed; top: 0; bottom: auto; height: 38px; display: flex; align-items: center; justify-content: center;
+      background: var(--ink); color: var(--cream); mix-blend-mode: normal; font-size: 9.5px; letter-spacing: 2.2px; z-index: 20;
+      border-bottom: 1px solid rgba(250,249,245,.14); }
+    .stage { padding-top: 38px; }
+    .plus { margin-top: calc(clamp(68px, 8vw, 110px) / -2 + 19px); }
+  }
+  /* short landscape phones: stay side by side, scale down */
+  @media (max-width: 860px) and (orientation: landscape) {
+    .content { gap: 10px; padding: 0 12px; }
+    .wordmark { font-size: clamp(30px, 6vw, 48px); }
+    .tagline { font-size: 13px; }
+    .eyebrow { font-size: 9.5px; letter-spacing: 2px; }
+    .enter { font-size: 10.5px; }
+    .plus { width: 56px; height: 56px; margin: -28px 0 0 -28px; }
+    .panel-ago { padding: 0 44px 0 16px; } .panel-hq { padding: 0 16px 0 44px; }
+    /* landscape: the line becomes a slim bar along the bottom */
+    .kicker { position: fixed; left: 0; right: 0; top: auto; bottom: 0; height: 30px; display: flex; align-items: center; justify-content: center;
+      background: var(--ink); color: var(--cream); mix-blend-mode: normal; font-size: 9px; letter-spacing: 2.2px; z-index: 20;
+      border-top: 1px solid rgba(250,249,245,.14); }
+    .stage { padding-bottom: 30px; }
+    .plus { margin-top: -43px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .content > *, .kicker, .plus { opacity: 1 !important; }
   }
 </style>
 </head>
 <body>
 
-<div style="width: 100%; box-sizing: border-box; overflow-x: hidden;">
+<main class="stage">
 
-  <!-- NAV -->
-  <div style="position: sticky; top: 0; z-index: 50; background: rgba(250,249,245,0.94); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(28,27,24,0.08);">
-    <div style="max-width: 1180px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between;">
-      <div style="display: flex; align-items: center; gap: 16px; flex-shrink: 0;">
-        <a href="#top" style="display: flex; align-items: baseline; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 21px; letter-spacing: -0.01em; color: #1C1B18;">AGOffice<span style="color: #1F4FA0;">.</span></a>
-        <div class="ago-nav-divider"></div>
-        <div class="ago-nav-sub">Adaptable Governance Office</div>
-        <div class="ago-hide-mobile" style="display: none; width: 1px; height: 20px; background: rgba(28,27,24,0.15);"></div>
-        <!-- ARCHIVED: nav tagline (Maya may want it back) -->
-        <div class="ago-hide-mobile" style="display: none; font-size: 10.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #1F4FA0; max-width: 250px; line-height: 1.35;">Project &amp; PMO Governance for Strategic &amp; Creative Teams</div>
-      </div>
-      <!-- ARCHIVED: mobile center tagline (Maya may want it back) -->
-      <div class="ago-mobile-center-tagline" style="display: none; flex: 1; text-align: center; padding: 0 14px; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: #1F4FA0; line-height: 1.4;">Project &amp; PMO Governance for Strategic &amp; Creative Teams</div>
-      <div class="ago-hide-mobile" style="display: flex; align-items: center; gap: 30px; font-size: 14px; font-weight: 600;">
-        <a class="ago-navlink" href="#framework">Approach</a>
-        <a class="ago-navlink" href="#faq">FAQ</a>
-        <a class="ago-navlink" href="https://www.thepmohq.com" target="_blank" rel="noopener noreferrer">PMOHQ</a>
-        <a class="ago-navlink" href="#about">About</a>
-        <a href="#intake" style="background: #1F4FA0; color: #FAF9F5; padding: 10px 18px; border-radius: 2px; font-weight: 700; font-size: 13.5px;">Pull Up</a>
-      </div>
-      <button class="ago-show-mobile" onclick="toggleMobileMenu()" aria-label="Menu" style="display: none; background: none; border: none; padding: 8px; cursor: pointer; flex-direction: column; gap: 5px;">
-        <span style="width: 22px; height: 2px; background: #1C1B18; display: block;"></span>
-        <span style="width: 22px; height: 2px; background: #1C1B18; display: block;"></span>
-        <span style="width: 22px; height: 2px; background: #1C1B18; display: block;"></span>
-      </button>
-    </div>
-    <div id="ago-mobile-menu" style="display: none; border-top: 1px solid rgba(28,27,24,0.08); background: #FAF9F5; padding: 8px 24px 20px; flex-direction: column;">
-        <a onclick="closeMobileMenu()" href="#framework" style="padding: 13px 0; font-size: 15px; font-weight: 600; color: #1C1B18; border-bottom: 1px solid rgba(28,27,24,0.07);">Approach</a>
-        <a onclick="closeMobileMenu()" href="#faq" style="padding: 13px 0; font-size: 15px; font-weight: 600; color: #1C1B18; border-bottom: 1px solid rgba(28,27,24,0.07);">FAQ</a>
-        <a href="https://www.thepmohq.com" target="_blank" rel="noopener noreferrer" style="padding: 13px 0; font-size: 15px; font-weight: 600; color: #1C1B18; border-bottom: 1px solid rgba(28,27,24,0.07);">PMOHQ</a>
-        <a onclick="closeMobileMenu()" href="#about" style="padding: 13px 0; font-size: 15px; font-weight: 600; color: #1C1B18; border-bottom: 1px solid rgba(28,27,24,0.07);">About</a>
-        <a href="blog/" style="padding: 13px 0; font-size: 15px; font-weight: 600; color: #1C1B18; border-bottom: 1px solid rgba(28,27,24,0.07);">Blog</a>
-        <a href="careers.html" style="padding: 13px 0; font-size: 15px; font-weight: 600; color: #1C1B18; border-bottom: 1px solid rgba(28,27,24,0.07);">Careers &amp; Referrals</a>
-        <a onclick="closeMobileMenu()" href="#intake" style="padding: 13px 0; font-size: 15px; font-weight: 700; color: #1F4FA0;">Contact</a>
-      </div>
+  <!-- LEFT: AGOffice -->
+  <div class="panel panel-ago">
+    <div class="glow"></div>
+    <div class="grid"></div>
+    <a class="content" href="agoffice.html" aria-label="Enter AGOffice — Where your work flows.">
+      <div class="eyebrow">The Practice</div>
+      <div class="wordmark">AGOffice<span class="dot">.</span><sup>&trade;</sup></div>
+      <p class="tagline">Where your work flows.</p>
+      <span class="enter">Enter <span class="arr">&rarr;</span></span>
+    </a>
   </div>
 
-  <!-- HERO -->
-  <div id="top" style="max-width: 1180px; margin: 0 auto; padding: 48px 24px 40px; display: flex; flex-direction: column; gap: 20px;">
-    <h1 class="ago-hero-h1" style="margin: 0; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: clamp(21px, 6vw, 48px); line-height: 1.12; max-width: 100%; color: #1C1B18; text-transform: uppercase; letter-spacing: -0.01em; white-space: nowrap;">Where your<br class="ago-hero-break-1"/> <span style="display: inline-block; overflow: hidden; height: 1.15em; line-height: 1.15; vertical-align: top;"><span id="ago-rotate-word-inner" style="color: #1F4FA0;">momentum</span></span><br/> flows.</h1>
-    <div style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 0.3px; color: #1C1B18;">Build it. Govern it. Adapt it.</div>
-    <p style="margin: 0; font-size: 16.5px; line-height: 1.65; max-width: 600px; color: #4A4944;">AGOffice&trade; provides the resources, expertise, and platform to help strategic and creative teams bring flexibility and structure to their work without slowing it down.</p>
-    <div style="margin-top: 6px;">
-      <a href="#intake" class="ago-btn-primary" style="background: #1F4FA0; color: #FAF9F5; padding: 16px 30px; font-weight: 700; font-size: 14.5px; letter-spacing: 0.3px; border-radius: 2px;">Work With Us &rarr;</a>
-    </div>
+  <!-- RIGHT: PMOHQ -->
+  <div class="panel panel-hq">
+    <div class="glow"></div>
+    <div class="grid"></div>
+    <a class="content" href="pmohq.html" aria-label="Enter PMOHQ — Govern the way your work flows.">
+      <div class="eyebrow">The Platform</div>
+      <div class="wordmark wm-hq">PMOHQ<span class="dot">.</span><sup>&trade;</sup></div>
+      <p class="tagline">Govern the way your work flows.</p>
+      <span class="enter">Enter <span class="arr">&rarr;</span></span>
+    </a>
   </div>
 
-  <!-- LOGO MARQUEE -->
-  <div style="border-top: 1px solid rgba(28,27,24,0.08); border-bottom: 1px solid rgba(28,27,24,0.08); background: #F1EFE8; padding: 30px 0;">
-    <div style="max-width: 1180px; margin: 0 auto; padding: 0 24px 18px;">
-      <div style="font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: #8A897F;">Join the agencies, brands &amp; corporations we've helped</div>
-    </div>
-    <div style="display: flex; overflow: hidden; width: 100%;">
-      <div class="ago-marquee-track" style="display: flex; gap: 56px; flex-shrink: 0; padding-right: 56px;">
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Microsoft</span>
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Mastercard</span>
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Target</span>
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Marriott</span>
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">UnitedHealthcare</span>
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Shell</span>
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">IHG</span>
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Synchrony</span>
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Church's Chicken</span>
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">SCANA Energy</span>
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Axon Studios</span>
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Pixafy</span>
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Microsoft</span>
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Mastercard</span>
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Target</span>
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Marriott</span>
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">UnitedHealthcare</span>
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Shell</span>
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">IHG</span>
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Synchrony</span>
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Church's Chicken</span>
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">SCANA Energy</span>
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Axon Studios</span>
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Pixafy</span>
-      </div>
-    </div>
-    <div style="max-width: 1180px; margin: 0 auto; padding: 18px 24px 0;">
-      <div style="font-size: 12.5px; line-height: 1.6; color: #8A897F;">Delivered through direct engagements and elite talent partners including Creative Circle, 24 Seven Talent, and Aquent.</div>
-    </div>
+  <!-- THE + -->
+  <div class="plus" aria-hidden="true">
+    <div class="ring"></div>
+    <div class="bar h"></div>
+    <div class="bar v"></div>
   </div>
 
-  <!-- WHAT AGOFFICE CAN HELP MOVE -->
-  <div id="move" style="max-width: 1180px; margin: 0 auto; padding: 84px 24px 76px;">
-    <div style="max-width: 700px; margin-bottom: 30px;">
-      <h2 class="ago-section-h2" style="margin: 0 0 16px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 32px; line-height: 1.22; color: #1C1B18; text-transform: uppercase;">From GTM planning to<br/>managed services.</h2>
-      <p style="margin: 0; max-width: 680px; font-size: 15.5px; line-height: 1.7; color: #4A4944;">AGOffice&trade; brings together experienced practitioners, an adaptable governance framework, and PMOHQ&trade;, our proprietary governance platform, to help teams move work forward with greater clarity and control.</p>
-    </div>
-    <div class="ago-eyebrow">What AGOffice Can Help Move</div>
-    <div class="ago-spectrum-row" style="display: flex; align-items: center; flex-wrap: wrap; gap: 18px; font-size: 24px;">
-      <span class="ago-spectrum-item">GTM Planning</span><span class="ago-spectrum-slash">/</span>
-      <span class="ago-spectrum-item">Projects</span><span class="ago-spectrum-slash">/</span>
-      <span class="ago-spectrum-item">Campaigns</span><span class="ago-spectrum-slash">/</span>
-      <span class="ago-spectrum-item">Creative</span><span class="ago-spectrum-slash">/</span>
-      <span class="ago-spectrum-item">Managed Services</span>
-    </div>
-  </div>
+  <div class="kicker">One way in. Two ways of working.</div>
+  <div class="grain" aria-hidden="true"></div>
+</main>
 
-  <!-- HOW WE DO IT -->
-  <div id="framework" style="border-top: 1px solid rgba(28,27,24,0.08); background: #1C1B18; color: #FAF9F5;">
-    <div style="max-width: 1180px; margin: 0 auto; padding: 84px 24px 76px;">
-      <div class="ago-eyebrow" style="color: #1F4FA0;">How We Do It</div>
-      <div style="max-width: 680px; margin-bottom: 20px;">
-        <h2 class="ago-section-h2" style="margin: 0 0 14px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 32px; color: #FAF9F5; text-transform: uppercase;">One practice. Three ways in.</h2>
-        <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: #DAD8D0;">Choose the support that fits where your work needs to go.</p>
-      </div>
-      <div class="ago-stack-row" style="display: flex; align-items: stretch; gap: 20px; margin-top: 36px;">
-        <div style="flex: 1; border-top: 3px solid rgba(250,249,245,0.14); padding: 22px 0 0;">
-          <div style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 17px; color: #FAF9F5; margin-bottom: 10px;">The Practitioner(s)</div>
-          <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #B9B7AE;">Add experienced project management and governance expertise to your team through a fractional, fully remote practitioner.</p>
-        </div>
-        <div class="ago-plus" style="color: #1F4FA0;">+</div>
-        <div style="flex: 1; border-top: 3px solid rgba(250,249,245,0.14); padding: 22px 0 0;">
-          <div style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 17px; color: #FAF9F5; margin-bottom: 10px;">The Framework</div>
-          <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #B9B7AE;">Bring an adaptable governance framework into your existing way of working, giving your team greater structure without getting in the way of how they work.</p>
-        </div>
-        <div class="ago-plus" style="color: #1F4FA0;">+</div>
-        <div style="flex: 1; border-top: 3px solid rgba(250,249,245,0.14); padding: 22px 0 0;">
-          <div style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 17px; color: #FAF9F5; margin-bottom: 10px;">The Platform</div>
-          <p style="margin: 0 0 14px; font-size: 14px; line-height: 1.6; color: #B9B7AE;">Use PMOHQ&trade;, our proprietary governance platform, as a reference layer over the tools your team already uses. It provides governance context and visibility without replacing the systems that manage the work.</p>
-          <a href="https://www.thepmohq.com" target="_blank" rel="noopener noreferrer" class="ago-underline-link" style="font-weight: 700; font-size: 13.5px; color: #FAF9F5; border-bottom-color: rgba(250,249,245,0.4);"><span style="color: #1F4FA0;">&rarr;</span> Explore PMOHQ</a>
-        </div>
-      </div>
-      <div style="margin-top: 30px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.2px; color: #FAF9F5;">Start where you are. Add what you need. Adapt as the work evolves.</div>
-    </div>
-  </div>
-
-  <!-- FAQs -->
-  <div id="faq" style="max-width: 900px; margin: 0 auto; padding: 84px 24px 60px;">
-    <h2 class="ago-section-h2" style="margin: 0 0 10px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 32px; color: #1C1B18; text-transform: uppercase;">FAQs</h2>
-    <div class="ago-eyebrow" style="margin-bottom: 36px; text-transform: none; letter-spacing: 0; font-size: 15px; font-weight: 700;">Answers to the most frequently asked questions about our practitioners' experience, our approach, and our ways of working.</div>
-
-    <div class="ago-faq-item" style="padding: 0; border-bottom: 1px solid rgba(28,27,24,0.1);">
-      <button onclick="toggleFaq(0)" style="width: 100%; text-align: left; background: none; border: none; padding: 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer;">
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 16px; color: #1C1B18;"><span style="color: #1F4FA0;">Q:</span> Have your practitioners set up a PMO from the ground up?</span>
-        <span id="faq-icon-0" style="flex-shrink: 0; display: flex; transition: transform .2s ease;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 4.5L7 9.5L12 4.5" stroke="#1F4FA0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </button>
-      <div id="faq-answer-0" style="display: none;">
-        <p style="margin: 0 0 24px; font-size: 14.5px; line-height: 1.65; color: #6B6A64;"><span style="color: #1F4FA0; font-weight: 700;">A:</span> Yes. Our practitioners have built PMO structures from the ground up, establishing the governance, workflows, and operating practices teams need to bring greater clarity and consistency to the work.</p>
-      </div>
-    </div>
-    <div class="ago-faq-item" style="padding: 0; border-bottom: 1px solid rgba(28,27,24,0.1);">
-      <button onclick="toggleFaq(1)" style="width: 100%; text-align: left; background: none; border: none; padding: 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer;">
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 16px; color: #1C1B18;"><span style="color: #1F4FA0;">Q:</span> Have your PMs managed large, cross-functional teams?</span>
-        <span id="faq-icon-1" style="flex-shrink: 0; display: flex; transition: transform .2s ease;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 4.5L7 9.5L12 4.5" stroke="#1F4FA0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </button>
-      <div id="faq-answer-1" style="display: none;">
-        <p style="margin: 0 0 24px; font-size: 14.5px; line-height: 1.65; color: #6B6A64;"><span style="color: #1F4FA0; font-weight: 700;">A:</span> Yes. Our practitioners have coordinated work across creative, marketing, communications, strategy, production, and operations, bringing stakeholders, workstreams, and milestones into a clearer view of the work.</p>
-      </div>
-    </div>
-    <div class="ago-faq-item" style="padding: 0; border-bottom: 1px solid rgba(28,27,24,0.1);">
-      <button onclick="toggleFaq(2)" style="width: 100%; text-align: left; background: none; border: none; padding: 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer;">
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 16px; color: #1C1B18;"><span style="color: #1F4FA0;">Q:</span> Have your PMs governed complex campaigns and worked in regulated environments?</span>
-        <span id="faq-icon-2" style="flex-shrink: 0; display: flex; transition: transform .2s ease;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 4.5L7 9.5L12 4.5" stroke="#1F4FA0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </button>
-      <div id="faq-answer-2" style="display: none;">
-        <p style="margin: 0 0 24px; font-size: 14.5px; line-height: 1.65; color: #6B6A64;"><span style="color: #1F4FA0; font-weight: 700;">A:</span> Yes. Our practitioners have built delivery structures around complex timelines, multiple stakeholders, and shared launch dates from planning through production. This deep experience includes governing strict review and approval workflows for high-volume regulated communications where accuracy, visibility, and clear governance are critical to compliance.</p>
-      </div>
-    </div>
-    <div class="ago-faq-item" style="padding: 0; border-bottom: 1px solid rgba(28,27,24,0.1);">
-      <button onclick="toggleFaq(3)" style="width: 100%; text-align: left; background: none; border: none; padding: 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer;">
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 16px; color: #1C1B18;"><span style="color: #1F4FA0;">Q:</span> Have your practitioners worked across different industries and types of organizations?</span>
-        <span id="faq-icon-3" style="flex-shrink: 0; display: flex; transition: transform .2s ease;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 4.5L7 9.5L12 4.5" stroke="#1F4FA0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </button>
-      <div id="faq-answer-3" style="display: none;">
-        <p style="margin: 0 0 24px; font-size: 14.5px; line-height: 1.65; color: #6B6A64;"><span style="color: #1F4FA0; font-weight: 700;">A:</span> Yes. Our background spans creative agencies, growing brands, and global enterprise corporations. That range of experience shaped an adaptable approach that can bring greater structure to complex work without slowing creative execution.</p>
-      </div>
-    </div>
-    <div class="ago-faq-item" style="padding: 0; border-bottom: 1px solid rgba(28,27,24,0.1);">
-      <button onclick="toggleFaq(4)" style="width: 100%; text-align: left; background: none; border: none; padding: 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer;">
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 16px; color: #1C1B18;"><span style="color: #1F4FA0;">Q:</span> Have your PMs successfully optimized or improved an existing workflow?</span>
-        <span id="faq-icon-4" style="flex-shrink: 0; display: flex; transition: transform .2s ease;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 4.5L7 9.5L12 4.5" stroke="#1F4FA0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </button>
-      <div id="faq-answer-4" style="display: none;">
-        <p style="margin: 0 0 24px; font-size: 14.5px; line-height: 1.65; color: #6B6A64;"><span style="color: #1F4FA0; font-weight: 700;">A:</span> Yes. We start with what already works, identify where friction is slowing the work down, and introduce governance where it can create greater clarity, consistency, and flow.</p>
-      </div>
-    </div>
-    <div class="ago-faq-item" style="padding: 0; border-bottom: 1px solid rgba(28,27,24,0.1);">
-      <button onclick="toggleFaq(5)" style="width: 100%; text-align: left; background: none; border: none; padding: 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer;">
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 16px; color: #1C1B18;"><span style="color: #1F4FA0;">Q:</span> Can your practitioners work with the tools and systems we already use?</span>
-        <span id="faq-icon-5" style="flex-shrink: 0; display: flex; transition: transform .2s ease;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 4.5L7 9.5L12 4.5" stroke="#1F4FA0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </button>
-      <div id="faq-answer-5" style="display: none;">
-        <p style="margin: 0 0 24px; font-size: 14.5px; line-height: 1.65; color: #6B6A64;"><span style="color: #1F4FA0; font-weight: 700;">A:</span> Absolutely. AGOffice works with the tools and systems your team already uses. PMOHQ&trade; provides a governance layer over that existing ecosystem, so teams can keep managing the work in the tools they know while governing it in context.</p>
-      </div>
-    </div>
-    <div class="ago-faq-item" style="padding: 0; border-bottom: 1px solid rgba(28,27,24,0.1);">
-      <button onclick="toggleFaq(6)" style="width: 100%; text-align: left; background: none; border: none; padding: 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer;">
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 16px; color: #1C1B18;"><span style="color: #1F4FA0;">Q:</span> Do we have to use all three options, or can we pick just one?</span>
-        <span id="faq-icon-6" style="flex-shrink: 0; display: flex; transition: transform .2s ease;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 4.5L7 9.5L12 4.5" stroke="#1F4FA0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </button>
-      <div id="faq-answer-6" style="display: none;">
-        <p style="margin: 0 0 24px; font-size: 14.5px; line-height: 1.65; color: #6B6A64;"><span style="color: #1F4FA0; font-weight: 700;">A:</span> You can work with an AGOffice practitioner, adopt the framework, use PMOHQ&trade; as your governance platform, or combine them based on what your team needs. Each can stand on its own or work together as part of a broader engagement.</p>
-      </div>
-    </div>
-    <div class="ago-faq-item" style="padding: 0; border-bottom: 1px solid rgba(28,27,24,0.1);">
-      <button onclick="toggleFaq(7)" style="width: 100%; text-align: left; background: none; border: none; padding: 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer;">
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 16px; color: #1C1B18;"><span style="color: #1F4FA0;">Q:</span> What is the typical commitment required for a Practitioner?</span>
-        <span id="faq-icon-7" style="flex-shrink: 0; display: flex; transition: transform .2s ease;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 4.5L7 9.5L12 4.5" stroke="#1F4FA0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </button>
-      <div id="faq-answer-7" style="display: none;">
-        <p style="margin: 0 0 24px; font-size: 14.5px; line-height: 1.65; color: #6B6A64;"><span style="color: #1F4FA0; font-weight: 700;">A:</span> Practitioner engagements can flex around the work, whether you need project management support for a defined initiative or ongoing governance and delivery leadership.</p>
-      </div>
-    </div>
-    <div class="ago-faq-item" style="padding: 0; border-bottom: none;">
-      <button onclick="toggleFaq(8)" style="width: 100%; text-align: left; background: none; border: none; padding: 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer;">
-        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 16px; color: #1C1B18;"><span style="color: #1F4FA0;">Q:</span> How quickly can a Practitioner embed into our team?</span>
-        <span id="faq-icon-8" style="flex-shrink: 0; display: flex; transition: transform .2s ease;"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 4.5L7 9.5L12 4.5" stroke="#1F4FA0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </button>
-      <div id="faq-answer-8" style="display: none;">
-        <p style="margin: 0 0 24px; font-size: 14.5px; line-height: 1.65; color: #6B6A64;"><span style="color: #1F4FA0; font-weight: 700;">A:</span> We typically aim to get a practitioner aligned and embedded within 7&ndash;10 business days, depending on the scope and needs of the engagement.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- ABOUT -->
-  <div id="about" style="border-top: 1px solid rgba(28,27,24,0.08); background: #F1EFE8;">
-    <div style="max-width: 1180px; margin: 0 auto; padding: 84px 24px 76px;">
-      <div class="ago-grid-2" style="display: grid; grid-template-columns: 0.6fr 1fr; gap: 44px; align-items: start;">
-        <div>
-          <div class="ago-eyebrow">About</div>
-          <h2 class="ago-section-h2" style="margin: 0; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 28px; color: #1C1B18; text-transform: uppercase; line-height: 1.3;">The practice is built on practice.</h2>
-        </div>
-        <div>
-          <div style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 24px; color: #1C1B18; margin-bottom: 2px;">Maya Anders, BFA, PMP&reg;</div>
-          <div style="font-size: 13.5px; font-weight: 700; letter-spacing: 0.3px; text-transform: uppercase; color: #1F4FA0; margin-bottom: 18px;">Founder &amp; Principal, AGOffice&trade;</div>
-          <p style="margin: 0 0 22px; font-size: 16px; line-height: 1.65; color: #1C1B18;">12 years of agency and industry experience, including 8+ years dedicated to project management and governance across campaigns, projects, and managed services for creative agencies, brands, and global corporations.</p>
-          <a href="https://mayathepm.github.io/Maya-Anders/" target="_blank" rel="noopener noreferrer" class="ago-underline-link" style="font-weight: 700; font-size: 15px; color: #1C1B18;"><span style="color: #1F4FA0;">&rarr;</span> View Maya's Work</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- FINAL INVITATION + INTAKE FORM -->
-  <div id="intake" style="background: #1C1B18; color: #FAF9F5; padding: 88px 0;">
-    <div style="max-width: 780px; margin: 0 auto; padding: 0 24px;">
-      <div class="ago-eyebrow" style="color: #1F4FA0;">Work With Us</div>
-      <h2 class="ago-section-h2" style="margin: 0 0 14px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 34px; color: #FAF9F5; text-transform: uppercase;">What does your work need?</h2>
-      <p style="margin: 0 0 8px; font-size: 15.5px; line-height: 1.6; color: #DAD8D0; max-width: 560px;">If the work is getting stuck, your governance needs to catch up, or your team needs another layer of support, let's pull up and talk through what's going on.</p>
-      <p style="margin: 0 0 36px; font-size: 15.5px; font-weight: 700; line-height: 1.6; color: #FAF9F5;">But first, tell us what you think you need.</p>
-
-      <form action="https://formspree.io/f/mgavnpbg" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
-        <div class="ago-form-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-          <div>
-            <label class="ago-label" style="color: #B9B7AE;" for="ago-name">Name</label>
-            <input class="ago-field" id="ago-name" name="name" type="text" placeholder="Jordan Rivera" />
-          </div>
-          <div>
-            <label class="ago-label" style="color: #B9B7AE;" for="ago-email">Work Email</label>
-            <input class="ago-field" id="ago-email" name="email" type="email" placeholder="jordan@company.com" />
-          </div>
-          <div>
-            <label class="ago-label" style="color: #B9B7AE;" for="ago-company">Company</label>
-            <input class="ago-field" id="ago-company" name="company" type="text" placeholder="Company name" />
-          </div>
-          <div>
-            <label class="ago-label" style="color: #B9B7AE;" for="ago-role">Role / Title</label>
-            <input class="ago-field" id="ago-role" name="role" type="text" placeholder="Head of Marketing" />
-          </div>
-          <div>
-            <label class="ago-label" style="color: #B9B7AE;" for="ago-teamsize">Team Size</label>
-            <select class="ago-field" id="ago-teamsize" name="teamsize">
-              <option>1&ndash;5</option>
-              <option>6&ndash;15</option>
-              <option>16&ndash;50</option>
-              <option>50+</option>
-            </select>
-          </div>
-          <div>
-            <label class="ago-label" style="color: #B9B7AE;" for="ago-timeline">Ideal Start Timeline</label>
-            <select class="ago-field" id="ago-timeline" name="timeline">
-              <option>ASAP</option>
-              <option>Within 30 days</option>
-              <option>1&ndash;3 months</option>
-              <option>Just exploring</option>
-            </select>
-          </div>
-        </div>
-        <div>
-          <label class="ago-label" style="color: #B9B7AE;" for="ago-needs">What do you think you need? (Not sure? That's what the Pull Up is for.)</label>
-          <select class="ago-field" id="ago-needs" name="needs">
-            <option>Resources</option>
-            <option>Frameworks / Governance Tools</option>
-            <option>Expertise / Advisory Support</option>
-            <option>Platform + Structure</option>
-            <option>I'm not sure yet</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div>
-          <label class="ago-label" style="color: #B9B7AE;" for="ago-tools">Current Tech Stack</label>
-          <input class="ago-field" id="ago-tools" name="tools" type="text" placeholder="Asana, Monday, Workfront, Smartsheet..." />
-        </div>
-        <div>
-          <label class="ago-label" style="color: #B9B7AE;" for="ago-pain">Biggest Delivery Pain Point</label>
-          <textarea class="ago-field" id="ago-pain" name="pain" rows="4" placeholder="Where does work actually stall right now?" style="resize: vertical;"></textarea>
-        </div>
-        <button type="submit" class="ago-submit ago-btn-primary" style="align-self: flex-start; background: #1F4FA0; color: #FAF9F5; border: none; padding: 16px 30px; font-weight: 700; font-size: 15px; border-radius: 2px; cursor: pointer; margin-top: 6px;">Let's Pull Up &rarr;</button>
-      </form>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <div style="background: #1C1B18; color: #FAF9F5; padding: 60px 0 32px; border-top: 1px solid rgba(250,249,245,0.14);">
-    <div style="max-width: 1180px; margin: 0 auto; padding: 0 24px;">
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 36px; padding-bottom: 40px; border-bottom: 1px solid rgba(250,249,245,0.14);">
-        <div style="max-width: 460px; display: flex; flex-direction: column; gap: 6px;">
-          <div class="ago-footer-lockup" style="display: flex; align-items: center; gap: 16px;">
-            <a href="#top" style="display: flex; align-items: baseline; line-height: 1; flex-shrink: 0; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.01em; color: #FAF9F5;">AGOffice<span style="color: #1F4FA0;">.</span></a>
-            <div class="ago-nav-divider" style="background: rgba(250,249,245,0.25);"></div>
-            <div class="ago-nav-sub">Adaptable Governance Office</div>
-          </div>
-          <p class="ago-footer-tag" style="margin: 0; font-size: 13.5px; line-height: 1.6; color: #B9B7AE;">Workflow Governance Solutions for Strategic and<br class="ago-footer-break"/> Creative Teams.</p>
-          <p style="margin: 0; font-size: 13.5px; font-weight: 700; line-height: 1.6; color: #DAD8D0;">Where Your Work Flows.</p>
-          <!-- ARCHIVED: Pre-Onboarding Deck link (may reuse elsewhere)
-          <a href="#" onclick="return false;" style="font-size: 13px; font-weight: 700; color: #DAD8D0; cursor: default; line-height: 1.5;"><span style="color: #1F4FA0;">&rarr;</span> Download the AGOffice&trade; Pre-Onboarding Deck<br/><span style="font-weight: 400; color: #B9B7AE;">an expanded overview of how AGOffice&trade; works &amp; what to expect when you work with us.</span> <span style="font-size: 10.5px; font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase; color: #1F4FA0;">(Coming Soon)</span></a>
-          -->
-          <div style="display: flex; gap: 14px; margin-top: 14px;">
-            <a class="ago-social" href="https://www.instagram.com/theagoffice?stkn=MXAycnVhemRxa3pjZA%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="AGOffice on Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-            <a class="ago-social" style="color: #FAF9F5;" href="https://www.linkedin.com/company/agoffice-adaptable-governance-office/" target="_blank" rel="noopener noreferrer" aria-label="AGOffice on LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-          </div>
-        </div>
-        <div style="display: flex; gap: 64px; flex-wrap: wrap;">
-          <div style="display: flex; flex-direction: column; gap: 10px;">
-            <div style="font-size: 10.5px; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; color: #8A897F; margin-bottom: 4px;">AGOffice</div>
-            <a class="ago-navlink" href="#framework" style="font-size: 13.5px; color: #DAD8D0;">Approach</a>
-            <a class="ago-navlink" href="#faq" style="font-size: 13.5px; color: #DAD8D0;">FAQ</a>
-            <a class="ago-navlink" href="#about" style="font-size: 13.5px; color: #DAD8D0;">About</a>
-            <a class="ago-navlink" href="careers.html" style="font-size: 13.5px; color: #DAD8D0;">Careers &amp; Referrals</a>
-          </div>
-          <div style="display: flex; flex-direction: column; gap: 10px;">
-            <div style="font-size: 10.5px; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; color: #8A897F; margin-bottom: 4px;">Connect</div>
-            <a class="ago-navlink" href="mailto:mayathepm@gmail.com" style="font-size: 13.5px; color: #DAD8D0;">Contact</a>
-            <a class="ago-navlink" href="https://www.linkedin.com/company/agoffice-adaptable-governance-office/" style="font-size: 13.5px; color: #DAD8D0;">LinkedIn</a>
-            <a class="ago-navlink" href="https://www.thepmohq.com" style="font-size: 13.5px; color: #DAD8D0;">PMOHQ</a>
-            <a class="ago-navlink" href="blog/" style="font-size: 13.5px; color: #DAD8D0;">Blog</a>
-          </div>
-          <div style="display: flex; flex-direction: column; gap: 10px;">
-            <div style="font-size: 10.5px; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; color: #8A897F; margin-bottom: 4px;">Legal</div>
-            <span style="font-size: 13.5px; color: #8A897F; cursor: default;" aria-disabled="true">Privacy Policy</span>
-            <span style="font-size: 13.5px; color: #8A897F; cursor: default;" aria-disabled="true">Terms of Use</span>
-          </div>
-        </div>
-      </div>
-      <div style="padding-top: 22px; font-size: 12.5px; color: #8A897F;">&copy; 2026 The AGOffice&trade;. Adaptable Governance Office&trade;.</div>
-    </div>
-  </div>
-
-</div>
-
+<style>
+  @media (max-width: 860px) and (orientation: portrait) {
+    .plus { left: 50% !important; top: 50% !important; }
+  }
+</style>
+<div class="dot-cursor" id="dotCursor" aria-hidden="true"></div>
+<style>
+  .dot-cursor { display: none; }
+  @media (hover: hover) and (pointer: fine) {
+    html.has-dot, html.has-dot * { cursor: none !important; }
+    .dot-cursor {
+      display: block; position: fixed; left: 0; top: 0; z-index: 9999; pointer-events: none;
+      width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 50%;
+      background: rgba(30,79,160,.92); border: 2px solid rgba(255,255,255,.95); box-sizing: border-box;
+      box-shadow: 0 2px 10px rgba(0,0,0,.45); opacity: 0;
+      transition: opacity .25s, width .2s, height .2s, margin .2s, transform .14s;
+      will-change: transform;
+    }
+    .dot-cursor.on { opacity: 1; }
+    .dot-cursor.big { width: 30px; height: 30px; margin: -15px 0 0 -15px; }
+    .dot-cursor.down { transform: scale(.78); }
+  }
+</style>
 <script>
-  function toggleMobileMenu() {
-    var menu = document.getElementById('ago-mobile-menu');
-    var isOpen = menu.style.display === 'flex';
-    menu.style.display = isOpen ? 'none' : 'flex';
+(function () {
+  if (!window.matchMedia || !matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+  var d = document.getElementById("dotCursor"); if (!d) return;
+  document.documentElement.classList.add("has-dot");
+  var tx = 0, ty = 0, x = 0, y = 0, shown = false, raf = 0;
+  function tick() {
+    x += (tx - x) * 0.35; y += (ty - y) * 0.35;
+    d.style.left = x + "px"; d.style.top = y + "px";
+    raf = (Math.abs(tx - x) + Math.abs(ty - y) > 0.3) ? requestAnimationFrame(tick) : 0;
   }
-  function closeMobileMenu() {
-    document.getElementById('ago-mobile-menu').style.display = 'none';
-  }
-
-  function toggleFaq(n) {
-    var ans = document.getElementById('faq-answer-' + n);
-    var wasOpen = ans.style.display === 'block';
-    for (var i = 0; i < 9; i++) {
-      document.getElementById('faq-answer-' + i).style.display = 'none';
-      document.getElementById('faq-icon-' + i).style.transform = 'rotate(0deg)';
-    }
-    if (!wasOpen) {
-      ans.style.display = 'block';
-      document.getElementById('faq-icon-' + n).style.transform = 'rotate(180deg)';
-    }
-  }
-
-  (function () {
-    var words = ['momentum', 'creativity', 'strategy', 'delivery', 'decisions', 'work'];
-    var i = 0;
-    var el = document.getElementById('ago-rotate-word-inner');
-    if (!el) return;
-    function cycle() {
-      setTimeout(function () {
-        el.style.opacity = '0';
-        setTimeout(function () {
-          i = (i + 1) % words.length;
-          el.textContent = words[i];
-          el.style.opacity = '1';
-          cycle();
-        }, 260);
-      }, 1200);
-    }
-    cycle();
-  })();
+  addEventListener("mousemove", function (e) {
+    tx = e.clientX; ty = e.clientY;
+    if (!shown) { shown = true; x = tx; y = ty; d.classList.add("on"); }
+    var t = e.target && e.target.closest ? e.target.closest("a,button,[role=button]") : null;
+    d.classList.toggle("big", !!t);
+    if (!raf) raf = requestAnimationFrame(tick);
+  }, { passive: true });
+  addEventListener("mousedown", function () { d.classList.add("down"); });
+  addEventListener("mouseup", function () { d.classList.remove("down"); });
+  document.addEventListener("mouseleave", function () { d.classList.remove("on"); shown = false; });
+})();
 </script>
 </body>
 </html>
