@@ -15,6 +15,7 @@
    rate      '$65–85/hr', 'Rate DOE', ...
    posted    'YYYY-MM-DD' (shown as 'Posted Sep 20'; newest shows first)
    active    true shows the role, false hides it without deleting it
+   sample    true adds a SAMPLE ribbon (remove it, or set false, for real roles)
    ===================================================================== */
 window.AGO_JOBS = {
 
@@ -33,7 +34,7 @@ window.AGO_JOBS = {
       type: 'Contract', location: 'Remote',
       cert: 'pmp-preferred',
       summary: 'Lead delivery across multiple creative workstreams for a national brand campaign.',
-      rate: '$65–85/hr', posted: '2026-09-20', active: true
+      rate: '$65–85/hr', posted: '2026-09-20', active: true, sample: true
     },
     {
       id: 'digital-marketing-pm-ecommerce',
@@ -42,7 +43,7 @@ window.AGO_JOBS = {
       type: 'Contract-to-Hire', location: 'Remote',
       cert: 'capm-preferred',
       summary: 'Own the delivery calendar across paid, lifecycle, and creative production teams for a growing DTC brand.',
-      rate: '$55–70/hr', posted: '2026-09-15', active: true
+      rate: '$55–70/hr', posted: '2026-09-15', active: true, sample: true
     },
     {
       id: 'program-manager-enterprise-comms',
@@ -51,7 +52,7 @@ window.AGO_JOBS = {
       type: 'Fractional', location: 'Remote',
       cert: 'pmp-required',
       summary: 'Govern review and approval workflows for high-volume regulated communications across multiple stakeholders.',
-      rate: 'Rate DOE', posted: '2026-09-10', active: true
+      rate: 'Rate DOE', posted: '2026-09-10', active: true, sample: true
     }
   ]
 };

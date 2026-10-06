@@ -13,7 +13,7 @@
   if (!jobs.length) { grid.innerHTML = '<p class="ago-opp-empty">New roles will appear here as they come in through our network.</p>'; return; }
   grid.innerHTML = jobs.map(function (j, i) {
     var c = (D.certifications || {})[j.cert] || D.certifications['none'];
-    return '<div class="ago-opp-card">' +
+    return '<div class="ago-opp-card">' + (j.sample ? '<span class="ago-opp-ribbon">Sample</span>' : '') +
       '<div class="ago-opp-meta">' + esc(j.type) + ' &middot; ' + esc(j.location) + '</div>' +
       '<div class="ago-opp-title">' + esc(j.title) + '</div>' +
       '<div class="ago-opp-client">' + esc(j.client) + '</div>' +

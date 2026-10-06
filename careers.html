@@ -25,7 +25,8 @@
   .ago-field { width: 100%; box-sizing: border-box; padding: 12px 14px; border: 1px solid rgba(28,27,24,0.18); border-radius: 2px; font-size: 14.5px; background: #FFFFFF; color: #1C1B18; }
   .ago-field:focus { outline: none; border-color: #1F4FA0; }
   .ago-label { display: block; font-size: 11.5px; font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase; color: #6B6A64; margin-bottom: 6px; }
-  .ago-opp-card { background: #FFFFFF; border: 1px solid rgba(28,27,24,0.12); border-radius: 4px; padding: 26px; display: flex; flex-direction: column; }
+  .ago-opp-card { background: #FFFFFF; border: 1px solid rgba(28,27,24,0.12); border-radius: 4px; padding: 26px; display: flex; position: relative; overflow: hidden; flex-direction: column; }
+  .ago-opp-ribbon { position: absolute; top: 16px; right: -34px; width: 122px; transform: rotate(40deg); background: #1F4FA0; color: #FAF9F5; text-align: center; font-size: 10px; font-weight: 800; letter-spacing: 1.6px; text-transform: uppercase; padding: 4px 0; pointer-events: none; }
   .ago-opp-cta { align-self: flex-start; background: none; border: none; padding: 0; font-family: inherit; font-size: 13px; font-weight: 700; letter-spacing: 0.3px; text-transform: uppercase; color: #1F4FA0; cursor: pointer; }
   .ago-opp-cta:hover { text-decoration: underline; }
   .ago-opp-meta { font-size: 11px; font-weight: 800; letter-spacing: 0.8px; text-transform: uppercase; color: #8A897F; }
@@ -149,9 +150,10 @@
 
   <!-- ACTIVE OPPORTUNITIES -->
   <div id="opportunities" style="max-width: 1020px; margin: 0 auto; padding: 8px 24px 60px;">
-    <div class="ago-eyebrow">Active Referral Opportunities</div>
-    <h2 class="ago-section-h2" style="margin: 0 0 10px; font-size: 26px; color: #1C1B18; text-transform: uppercase;">Remote Project Management Opportunities</h2>
-    <p style="margin: 0 0 32px; font-size: 15px; line-height: 1.6; color: #6B6A64; max-width: 680px;">The below are examples of AGOffice&trade; RCR Network referral opportunities. New &amp; Active roles will be added as they come in through our network. Follow us on <a href="https://linkedin.com/in/mayaanders" target="_blank" rel="noopener noreferrer" style="color: #1F4FA0; font-weight: 600;">LinkedIn</a> &amp; <a href="https://www.instagram.com/theagoffice" target="_blank" rel="noopener noreferrer" style="color: #1F4FA0; font-weight: 600;">Instagram</a> to be the first to hear about new opportunities.</p>
+    <div class="ago-eyebrow">New &amp; Active Opportunities</div>
+    <h2 class="ago-section-h2" style="margin: 0 0 10px; font-size: 26px; color: #1C1B18; text-transform: uppercase;">Request a Referral</h2>
+    <p style="margin: 0 0 32px; font-size: 15px; line-height: 1.6; color: #6B6A64; max-width: 680px;">The below are examples of warm leads that will be available through the AGOffice&trade; RCR Network. New &amp; Active roles will be added as they are requested or presented to us.</p>
+    <p style="margin: -14px 0 32px; font-size: 15px; line-height: 1.6; color: #6B6A64; max-width: 680px;">Follow us on <a href="https://www.linkedin.com/company/agoffice-adaptable-governance-office/" target="_blank" rel="noopener noreferrer" style="color: #1F4FA0; font-weight: 600;">LinkedIn</a> &amp; <a href="https://www.instagram.com/theagoffice" target="_blank" rel="noopener noreferrer" style="color: #1F4FA0; font-weight: 600;">Instagram</a> to be the first to hear about new opportunities.</p>
     <div id="ago-opp-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;"></div>
     <p style="margin: 22px 0 0; font-size: 12.5px; line-height: 1.6; color: #8A897F;">* The AGOffice&trade; may receive a fee for successful placements of referrals.</p>
     <p style="margin: 14px 0 0;"><a href="partners.html" style="font-size: 13px; font-weight: 700; letter-spacing: 0.3px; text-transform: uppercase; color: #1F4FA0;">Explore our network &rarr;</a></p>
