@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>AGOffice + PMOHQ — One Way In</title>
-<meta name="description" content="One way in. Two ways of working. Choose AGOffice or PMOHQ.">
+<meta name="description" content="Two ways of working. One way in. Choose AGOffice or PMOHQ.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -112,8 +112,8 @@
   .enter {
     display: inline-flex; align-items: center; gap: 4px;
     font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
-    padding-bottom: 6px;
-    border-bottom: 2px solid currentColor;
+    padding-bottom: 0;
+    border-bottom: none;
     opacity: 0; transform: translateY(8px);
     transition: opacity .5s ease, transform .5s ease, gap .3s ease;
   }
@@ -172,6 +172,12 @@
     text-align: center; pointer-events: none;
     font-size: 11.5px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
     color: var(--cream); mix-blend-mode: difference;
+  }
+  /* desktop: the line sits in a slim black banner across the bottom */
+  @media (min-width: 861px) {
+    .kicker { position: fixed; bottom: 0; height: 42px; display: flex; align-items: center; justify-content: center;
+      background: var(--ink); mix-blend-mode: normal; z-index: 20; border-top: 1px solid rgba(250,249,245,.14); }
+    .stage { height: calc(100vh - 42px); height: calc(100dvh - 42px); }
   }
 
   /* ---------- Film grain ---------- */
@@ -240,10 +246,50 @@
     .plus { margin-top: -43px; }
   }
 
+
+  /* ---------- Touch: press-to-expand + zoom-through (mirrors the desktop hover) ---------- */
+  @media (hover: none), (max-width: 860px) {
+    .stage.press-ago .panel-ago, .stage.press-hq .panel-hq { flex-grow: 1.35; }
+    .stage.press-ago .panel-hq, .stage.press-hq .panel-ago { filter: brightness(.88) saturate(.9); }
+    .stage.press-ago .panel-ago .content, .stage.press-hq .panel-hq .content { transform: scale(1.04); }
+    .stage.press-ago .panel-ago .enter .arr, .stage.press-hq .panel-hq .enter .arr { transform: translateX(6px); }
+    .stage.press-ago .plus .ring, .stage.press-hq .plus .ring { transform: scale(1.12) rotate(90deg); }
+    .stage.press-ago .plus .bar, .stage.press-hq .plus .bar { background: #fff; }
+  }
+  @media (max-width: 860px) and (orientation: portrait) {
+    .stage.press-ago .plus { top: calc(50% + 19px + 6.5%); }
+    .stage.press-hq .plus { top: calc(50% + 19px - 6.5%); }
+  }
+  @media (max-width: 860px) and (orientation: landscape) {
+    .stage.press-ago .plus { left: 57.4%; }
+    .stage.press-hq .plus { left: 42.6%; }
+  }
+  /* the "zoom through" when a side is chosen (all devices) */
+  .stage.go .panel { transition: flex-grow .65s cubic-bezier(.5,0,.2,1), filter .5s ease, opacity .5s ease; }
+  .stage.go.go-ago .panel-ago, .stage.go.go-hq .panel-hq { flex-grow: 6; }
+  .stage.go.go-ago .panel-hq, .stage.go.go-hq .panel-ago { opacity: .0; filter: brightness(.6); }
+  .stage.go.go-ago .panel-ago .content, .stage.go.go-hq .panel-hq .content { transform: scale(1.18); transition: transform .65s cubic-bezier(.5,0,.2,1); }
+  .stage.go .plus { animation: none; opacity: 0; transform: scale(.4); transition: opacity .3s ease, transform .5s ease; }
+  .stage.go .plus .ring { animation: none; }
+  .stage.go ~ .kicker { opacity: 0; transition: opacity .3s ease; }
+  .stage.go { cursor: progress; }
+
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation: none !important; transition: none !important; }
     .content > *, .kicker, .plus { opacity: 1 !important; }
   }
+</style>
+<style>
+  /* Wordmarks: PMOHQ scaled so both span the same width; both sit in identical-height boxes on a shared baseline */
+  :root { --wa: clamp(36px, 5.6vw, 92px); }
+  .wordmark { height: calc(var(--wa) * 1.144); }
+  .wordmark.wm-hq { font-size: calc(var(--wa) * 1.144) !important; }
+  .wordmark.wm-ago { padding-top: calc(var(--wa) * 0.1217); box-sizing: border-box; }
+  @media (max-width: 860px) and (orientation: portrait) { :root { --wa: clamp(40px, 13vw, 64px); } }
+  @media (max-width: 860px) and (orientation: landscape) { :root { --wa: clamp(30px, 6vw, 48px); } }
+  /* CTA: more air above it, and the same visual weight on dark and light */
+  .content > .enter { margin-top: 12px; -webkit-font-smoothing: antialiased; }
+  .panel-hq .enter { font-weight: 600; }
 </style>
 </head>
 <body>
@@ -256,7 +302,7 @@
     <div class="grid"></div>
     <a class="content" href="agoffice.html" aria-label="Enter AGOffice — Where your work flows.">
       <div class="eyebrow">The Practice</div>
-      <div class="wordmark">AGOffice<span class="dot">.</span><sup>&trade;</sup></div>
+      <div class="wordmark wm-ago">AGOffice<span class="dot">.</span><sup>&trade;</sup></div>
       <p class="tagline">Where your work flows.</p>
       <span class="enter">Enter <span class="arr">&rarr;</span></span>
     </a>
@@ -266,11 +312,11 @@
   <div class="panel panel-hq">
     <div class="glow"></div>
     <div class="grid"></div>
-    <a class="content" href="pmohq.html" aria-label="Enter PMOHQ — Govern the way your work flows.">
+    <a class="content" href="https://www.thepmohq.com" aria-label="Join the PMOHQ waitlist — Govern the way your work flows.">
       <div class="eyebrow">The Platform</div>
       <div class="wordmark wm-hq">PMOHQ<span class="dot">.</span><sup>&trade;</sup></div>
       <p class="tagline">Govern the way your work flows.</p>
-      <span class="enter">Enter <span class="arr">&rarr;</span></span>
+      <span class="enter">Join the waitlist <span class="arr">&rarr;</span></span>
     </a>
   </div>
 
@@ -281,7 +327,7 @@
     <div class="bar v"></div>
   </div>
 
-  <div class="kicker">One way in. Two ways of working.</div>
+  <div class="kicker">Adapt. Govern. Think Beyond Delivery&trade;</div>
   <div class="grain" aria-hidden="true"></div>
 </main>
 
@@ -291,6 +337,32 @@
   }
 </style>
 <div class="dot-cursor" id="dotCursor" aria-hidden="true"></div>
+<script>
+(function () {
+  var stage = document.querySelector('.stage'); if (!stage) return;
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var panels = [['ago', stage.querySelector('.panel-ago')], ['hq', stage.querySelector('.panel-hq')]];
+  function sideOf(el) { var p = el.closest('.panel'); return p && (p.classList.contains('panel-ago') ? 'ago' : 'hq'); }
+  function clear() { stage.classList.remove('press-ago', 'press-hq'); }
+  stage.addEventListener('pointerdown', function (e) {
+    if (e.pointerType === 'mouse' || stage.classList.contains('go')) return;
+    var s = sideOf(e.target); if (s) { clear(); stage.classList.add('press-' + s); }
+  }, { passive: true });
+  ['pointerup', 'pointercancel'].forEach(function (t) {
+    stage.addEventListener(t, function () { setTimeout(function () { if (!stage.classList.contains('go')) clear(); }, 350); }, { passive: true });
+  });
+  stage.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a.content'); if (!a || reduce) return;
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;
+    e.preventDefault();
+    var s = sideOf(a); clear();
+    stage.classList.add('go', 'go-' + s);
+    setTimeout(function () { location.href = a.href; }, 620);
+  });
+  window.addEventListener('pageshow', function (e) { if (e.persisted) { stage.classList.remove('go', 'go-ago', 'go-hq'); clear(); } });
+})();
+</script>
+
 <style>
   .dot-cursor { display: none; }
   @media (hover: hover) and (pointer: fine) {
