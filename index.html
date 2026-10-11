@@ -278,6 +278,22 @@
     *, *::before, *::after { animation: none !important; transition: none !important; }
     .content > *, .kicker, .plus { opacity: 1 !important; }
   }
+.tagline { text-wrap: balance; }
+
+/* ---------- Alignment pass ---------- */
+  /* trademark mark sits outside the wordmark box so the letters, not letters+mark, are what centres */
+  .wordmark { position: relative; }
+  .wordmark sup { position: absolute; left: 100%; top: 0; margin-left: .12em; }
+  /* tracked uppercase leaves trailing space after the last letter; offset it so the text itself centres */
+  .eyebrow { padding-left: 3px; }
+  .kicker { padding-left: 3px; }
+  .enter { position: relative; padding-left: 2px; }
+  .enter .arr { position: absolute; left: 100%; margin-left: 6px; }
+  /* on desktop the Enter link is revealed on hover: take it out of flow so the visible lockup centres on the + */
+  @media (hover: hover) and (min-width: 861px) {
+    .content { position: relative; }
+    .content > .enter { position: absolute; left: 0; right: 0; top: 100%; margin-top: 18px; justify-content: center; }
+  }
 </style>
 <style>
   /* Wordmarks: PMOHQ scaled so both span the same width; both sit in identical-height boxes on a shared baseline */
@@ -300,10 +316,10 @@
   <div class="panel panel-ago">
     <div class="glow"></div>
     <div class="grid"></div>
-    <a class="content" href="agoffice.html" aria-label="Enter AGOffice — Where your work flows.">
+    <a class="content" href="agoffice.html" aria-label="Enter AGOffice — Where Your Work Flows.">
       <div class="eyebrow">The Practice</div>
       <div class="wordmark wm-ago">AGOffice<span class="dot">.</span><sup>&trade;</sup></div>
-      <p class="tagline">Where your work flows.</p>
+      <p class="tagline">Where Your Work Flows.</p>
       <span class="enter">Enter <span class="arr">&rarr;</span></span>
     </a>
   </div>
@@ -312,10 +328,10 @@
   <div class="panel panel-hq">
     <div class="glow"></div>
     <div class="grid"></div>
-    <a class="content" href="https://www.thepmohq.com" aria-label="Join the PMOHQ waitlist — Govern the way your work flows.">
+    <a class="content" href="https://www.thepmohq.com" aria-label="Join the PMOHQ waitlist — Because you need more.">
       <div class="eyebrow">The Platform</div>
       <div class="wordmark wm-hq">PMOHQ<span class="dot">.</span><sup>&trade;</sup></div>
-      <p class="tagline">Govern the way your work flows.</p>
+      <p class="tagline">Because you need more.</p>
       <span class="enter">Join the waitlist <span class="arr">&rarr;</span></span>
     </a>
   </div>
