@@ -119,6 +119,8 @@
   @keyframes tlDraw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
   .content:hover .tl-pen, .content:focus-visible .tl-pen, .content:active .tl-pen { opacity: 1; }
   .content:hover .tl-pen .m, .content:focus-visible .tl-pen .m, .content:active .tl-pen .m { animation: tlDraw .9s cubic-bezier(.55,.1,.25,1) forwards; }
+  .content.ul .tl-pen { opacity: 1; }
+  .content.ul .tl-pen .m { animation: tlDraw .9s cubic-bezier(.55,.1,.25,1) forwards; }
   @media (prefers-reduced-motion: reduce) { .tl-pen .m { stroke-dashoffset: 0; animation: none !important; } }
   .enter {
     display: inline-flex; align-items: center; gap: 4px;
@@ -382,9 +384,16 @@
     var a = e.target.closest && e.target.closest('a.content'); if (!a || reduce) return;
     if (e.metaKey || e.ctrlKey || e.shiftKey || e.button) return;
     e.preventDefault();
+    if (stage.classList.contains('go')) return;
     var s = sideOf(a); clear();
-    stage.classList.add('go', 'go-' + s);
-    setTimeout(function () { location.href = a.href; }, 620);
+    /* zoom through instantly, draw the ink underline as it lands, then hold a beat before leaving */
+    stage.classList.add('go', 'go-' + s); a.classList.add('ul');
+    var drawn = a._hoverAt ? Math.max(0, 900 - (performance.now() - a._hoverAt)) : 900;
+    setTimeout(function () { location.href = a.href; }, Math.max(650, drawn) + 1000);
+  });
+  Array.prototype.forEach.call(stage.querySelectorAll('a.content'), function (a) {
+    a.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') a._hoverAt = performance.now(); });
+    a.addEventListener('pointerleave', function () { a._hoverAt = 0; });
   });
   window.addEventListener('pageshow', function (e) { if (e.persisted) { stage.classList.remove('go', 'go-ago', 'go-hq'); clear(); } });
 })();
