@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The AGOffice — Adaptable Governance Office</title>
-<meta name="description" content="AGOffice brings together subject matter expertise, an adaptable governance framework, and PMOHQ, our in-house workflow governance platform, to equip strategic project leaders and teams with the ability to govern their work without disrupting its flow.">
+<meta name="description" content="AGOffice brings together subject matter expertise, an adaptable governance framework, and PMOHQ, our in-house workflow governance platform, to help strategic project leaders and teams govern their work without disrupting its flow.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -67,6 +67,17 @@
     .ago-footer-lockup { gap: 14px !important; }
     .ago-footer-lockup .ago-nav-sub { letter-spacing: 1.17px; }
   }
+  /* hero copy and section copy share one measure so their right edges line up */
+  #top p, #move > div > p { max-width: 640px !important; }
+  /* landscape phones: stop OS text inflation and size type by height, not just width */
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  @media (orientation: landscape) and (max-height: 520px) {
+    #top { padding-top: 28px !important; padding-bottom: 28px !important; gap: 14px !important; }
+    .ago-hero-h1 { font-size: clamp(24px, 4.4vw, 34px) !important; }
+    #top p, #move > div > p { font-size: 15px !important; line-height: 1.6 !important; }
+    .ago-section-h2 { font-size: 24px !important; }
+    .ago-spectrum-row { font-size: 19px !important; }
+  }
 </style>
 </head>
 <body>
@@ -113,7 +124,7 @@
   <!-- HERO -->
   <div id="top" style="max-width: 1180px; margin: 0 auto; padding: 48px 24px 40px; display: flex; flex-direction: column; gap: 20px;">
     <h1 class="ago-hero-h1" style="margin: 0; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: clamp(21px, 6vw, 48px); line-height: 1.12; max-width: 100%; color: #1C1B18; text-transform: uppercase; letter-spacing: -0.01em; white-space: nowrap;">Where your<br class="ago-hero-break-1"/> <span style="display: inline-block; overflow: hidden; height: 1.15em; line-height: 1.15; vertical-align: top;"><span id="ago-rotate-word-inner" style="color: #1F4FA0;">momentum</span></span><br/> flows.</h1>
-    <p style="margin: 0; font-size: 16.5px; line-height: 1.65; max-width: 600px; color: #4A4944;">AGOffice&trade; brings together subject matter expertise, an adaptable governance framework, and PMOHQ&trade;, our in-house workflow governance platform, to equip strategic project leaders and teams with the ability to govern their work without disrupting its flow.</p>
+    <p style="margin: 0; font-size: 16.5px; line-height: 1.65; max-width: 600px; color: #4A4944;">AGOffice&trade; brings together subject matter expertise, an adaptable governance framework, and PMOHQ&trade;, our in-house workflow governance platform, to help strategic project leaders and teams govern their work without disrupting its flow.</p>
     <div style="margin-top: 6px;">
       <a href="#intake" class="ago-btn-primary" style="background: #1F4FA0; color: #FAF9F5; padding: 16px 30px; font-weight: 700; font-size: 14.5px; letter-spacing: 0.3px; border-radius: 2px;">Work With Us &rarr;</a>
     </div>
@@ -163,7 +174,7 @@
   <div id="move" style="max-width: 1180px; margin: 0 auto; padding: 84px 24px 76px;">
     <div style="max-width: 700px; margin-bottom: 30px;">
       <h2 class="ago-section-h2" style="margin: 0 0 16px; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 32px; line-height: 1.22; color: #1C1B18; text-transform: uppercase;">From GTM planning to<br/>managed services.</h2>
-      <p style="margin: 0; max-width: 680px; font-size: 15.5px; line-height: 1.7; color: #4A4944;">AGOffice&rsquo;s solutions provide the right layer of governance, expert judgment and adaptability to keep the work flowing and the team moving on the critical path, and pivot if needed.</p>
+      <p style="margin: 0; max-width: 680px; font-size: 15.5px; line-height: 1.7; color: #4A4944;">Once we determine what your work needs, we integrate the right level of governance and tailor our solutions to keep things moving and support pivots when needed.</p>
     </div>
     <div class="ago-eyebrow">What AGOffice Can Help Move</div>
     <div class="ago-spectrum-row" style="display: flex; align-items: center; flex-wrap: wrap; gap: 18px; font-size: 24px;">
