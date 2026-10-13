@@ -45,6 +45,7 @@
   .ago-nav-sub { font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #1F4FA0; line-height: 1; white-space: nowrap; }
   .ago-social { color: #DAD8D0; display: inline-flex; transition: color .15s ease; }
   .ago-social:hover { color: #1F4FA0; }
+  @media (min-width: 861px) and (max-width: 1080px) { .ago-nav-sub, .ago-nav-divider { display: none !important; } }
   .ago-nav-divider { width: 1px; height: 20px; background: rgba(28,27,24,0.15); flex-shrink: 0; }
   @media (max-width: 860px) {
     .ago-hide-mobile { display: none !important; }
@@ -105,6 +106,8 @@
         <a class="ago-navlink" href="#faq">FAQ</a>
         <a class="ago-navlink" href="pmohq.html">PMOHQ</a>
         <a class="ago-navlink" href="#about">About</a>
+        <a class="ago-navlink" href="blog/index.html">Blog</a>
+        <a class="ago-navlink" href="careers.html">Referrals</a>
         <a href="#intake" style="background: #1F4FA0; color: #FAF9F5; padding: 10px 18px; border-radius: 2px; font-weight: 700; font-size: 13.5px;">Pull Up</a>
       </div>
       <button class="ago-show-mobile" onclick="toggleMobileMenu()" aria-label="Menu" style="display: none; background: none; border: none; padding: 8px; cursor: pointer; flex-direction: column; gap: 5px;">
@@ -119,7 +122,7 @@
         <a href="pmohq.html" style="padding: 13px 0; font-size: 15px; font-weight: 600; color: #1C1B18; border-bottom: 1px solid rgba(28,27,24,0.07);">PMOHQ</a>
         <a onclick="closeMobileMenu()" href="#about" style="padding: 13px 0; font-size: 15px; font-weight: 600; color: #1C1B18; border-bottom: 1px solid rgba(28,27,24,0.07);">About</a>
         <a href="blog/index.html" style="padding: 13px 0; font-size: 15px; font-weight: 600; color: #1C1B18; border-bottom: 1px solid rgba(28,27,24,0.07);">Blog</a>
-        <a href="careers.html" style="padding: 13px 0; font-size: 15px; font-weight: 600; color: #1C1B18; border-bottom: 1px solid rgba(28,27,24,0.07);">Careers &amp; Referrals</a>
+        <a href="careers.html" style="padding: 13px 0; font-size: 15px; font-weight: 600; color: #1C1B18; border-bottom: 1px solid rgba(28,27,24,0.07);">Referrals</a>
         <a onclick="closeMobileMenu()" href="#intake" style="padding: 13px 0; font-size: 15px; font-weight: 700; color: #1F4FA0;">Contact</a>
       </div>
   </div>
@@ -138,7 +141,8 @@
     <div style="max-width: 1180px; margin: 0 auto; padding: 0 24px 34px;">
       <div style="font-size: clamp(8px, 2.25vw, 11px); font-weight: 800; letter-spacing: clamp(0.3px, 0.15vw, 1.5px); text-transform: uppercase; color: #6F6E64; white-space: nowrap;">Join the agencies, brands &amp; corporations we've helped</div>
     </div>
-    <div style="display: flex; overflow: hidden; width: 100%;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 24px;">
+    <div style="display: flex; overflow: hidden; width: 100%; -webkit-mask-image: linear-gradient(to right, transparent 0, #000 36px, #000 calc(100% - 36px), transparent 100%); mask-image: linear-gradient(to right, transparent 0, #000 36px, #000 calc(100% - 36px), transparent 100%);">
       <div class="ago-marquee-track" style="display: flex; gap: 56px; flex-shrink: 0; padding-right: 56px;">
         <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Microsoft</span>
         <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 21px; color: #3D3D37; white-space: nowrap;">Mastercard</span>
@@ -167,6 +171,7 @@
       </div>
     </div>
     <div style="height: 1px; background: rgba(28,27,24,0.12); margin-top: 34px; margin-bottom: 18px;"></div>
+    </div>
     <div style="max-width: 1180px; margin: 0 auto; padding: 0 24px;">
       <div style="font-size: 10px; line-height: 1.6; color: #6F6E64;">Delivered through direct engagements and elite talent agencies including Everforth Creative Circle, 24 Seven Talent, and Aquent*.</div>
       <div style="font-size: 8.5px; line-height: 1.5; color: #8A897F; margin-top: 6px;">*AGOffice&trade; &amp; PMOHQ&trade; are not subsidiaries or directly affiliated with any of the companies, agencies, brands or corporations listed.</div>
