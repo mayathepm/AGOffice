@@ -96,6 +96,8 @@
     letter-spacing: -0.02em;
   }
   .wordmark .dot { color: var(--blue); }
+  .wordmark .dot { display: inline-block; width: .216em; height: .216em; border-radius: 50%; background: currentColor; position: relative; top: -.004em; margin: 0 .0425em; font-size: inherit; }
+  .wm-hq .dot { width: .1945em; height: .1945em; top: .0123em; margin: 0 .0432em 0 .0443em; }
   .wordmark sup { font-size: .2em; font-weight: 600; margin-left: .15em; align-self: flex-start; margin-top: .35em; letter-spacing: 0; opacity: .7; }
   .wm-hq { font-weight: 700; }                      /* matches the PMOHQ logo: Poppins 700 */
   .panel-hq .wordmark .dot { color: #1E4FA0; }       /* brand dot colour from the PMOHQ app */
@@ -331,7 +333,7 @@
     <div class="grid"></div>
     <a class="content" href="agoffice.html" aria-label="Enter AGOffice — Where Your Work Flows">
       <div class="eyebrow">The Practice</div>
-      <div class="wordmark wm-ago">AGOffice<span class="dot">.</span><sup>&trade;</sup></div>
+      <div class="wordmark wm-ago">AGOffice<span class="dot"></span><sup>&trade;</sup></div>
       <p class="tagline"><span class="tl">Where Your Work Flows<svg class="tl-pen" viewBox="0 0 184 30" preserveAspectRatio="none" aria-hidden="true"><defs><mask id="pmA" maskUnits="userSpaceOnUse" x="-10" y="-10" width="210" height="60"><path class="m" pathLength="1" d="M2 18 C42 25 112 25 182 6"/></mask></defs><path mask="url(#pmA)" d="M1 17 C38 21 112 22 183 5 C186 4.4 186 6.6 183 7.8 C114 28 38 28 1 17 Z"/></svg></span></p>
       <span class="enter">Enter <span class="arr">&rarr;</span></span>
     </a>
@@ -343,7 +345,7 @@
     <div class="grid"></div>
     <a class="content" href="https://www.thepmohq.com" aria-label="Join the PMOHQ waitlist — Because you need more">
       <div class="eyebrow">The Platform</div>
-      <div class="wordmark wm-hq">PMOHQ<span class="dot">.</span><sup>&trade;</sup></div>
+      <div class="wordmark wm-hq">PMOHQ<span class="dot"></span><sup>&trade;</sup></div>
       <p class="tagline"><span class="tl">Because you need more<svg class="tl-pen" viewBox="0 0 184 30" preserveAspectRatio="none" aria-hidden="true"><defs><mask id="pmB" maskUnits="userSpaceOnUse" x="-10" y="-10" width="210" height="60"><path class="m" pathLength="1" d="M2 18 C42 25 112 25 182 6"/></mask></defs><path mask="url(#pmB)" d="M1 17 C38 21 112 22 183 5 C186 4.4 186 6.6 183 7.8 C114 28 38 28 1 17 Z"/></svg></span></p>
       <span class="enter">Join the waitlist <span class="arr">&rarr;</span></span>
     </a>
