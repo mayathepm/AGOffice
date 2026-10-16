@@ -11,6 +11,33 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
 <style>
+  /* ---- navy treatment: page chrome goes dark, product windows stay light ---- */
+  html,body{background:#1C1B18 !important;color:#FAF9F5}
+  #root>div{background:#1C1B18 !important;position:relative;overflow:hidden}
+  #root>div:before{content:"";position:fixed;left:50%;top:-10%;width:90vmax;height:90vmax;margin-left:-45vmax;background:radial-gradient(closest-side,rgba(60,116,224,.30),transparent 70%);pointer-events:none;z-index:0;animation:pmDrift 26s ease-in-out infinite alternate}
+  @keyframes pmDrift{from{transform:translate(-4%,0)}to{transform:translate(4%,6%)}}
+  #root>div:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;color:#FAF9F5;opacity:.06;background-image:linear-gradient(to right,currentColor 1px,transparent 1px);background-size:12.5% 100%;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 30%,#000 70%,transparent);mask-image:linear-gradient(to bottom,transparent,#000 30%,#000 70%,transparent)}
+  #root>div>*{position:relative;z-index:1}
+  .pm-grain{position:fixed;inset:-10%;z-index:50;pointer-events:none;opacity:.16;mix-blend-mode:soft-light;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 .9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");animation:pmGrain 1.2s steps(6) infinite}
+  @keyframes pmGrain{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
+  .pmohq-explore-hero .pm-lockup span, .pmohq-explore-hero .pm-tagline{color:#FAF9F5 !important}
+  .pmohq-explore-hero .pm-lockup span span{background:#3C74E0 !important}
+  .pm-pen path:not(.pm-pen-m){fill:#7FA6F0}
+  .pmohq-explore-hero p{color:#C4C2B8 !important}
+  .pmohq-explore-hero p:nth-child(2){color:#FAF9F5 !important}
+  .pm-see-label{color:#9A988F !important}.pm-see-sep{color:#4A4943 !important}.pm-see-sub{color:#C4C2B8 !important}
+  .pmohq-compilation-card{background:#24231F !important;border-color:rgba(250,249,245,.13) !important}
+  .pmohq-compilation-card>div:last-child{background:#24231F !important}
+  .pmohq-compilation-card>div:last-child *{color:#E6E4DC !important}
+  .pmohq-explore-section h2.pm-h2{color:#FAF9F5 !important}
+  .pmohq-explore-section>div:first-child p{color:#C4C2B8 !important}
+  .pmohq-explore-section>div:first-child button{color:#7FA6F0 !important}
+  #root h1{color:#FAF9F5 !important}
+  .pmohq-cycle-track span{color:#7FA6F0 !important}
+  .pmohq-explore-section:not(#explore-resources)::after{background:linear-gradient(#fff,#fff) center/12px 2px no-repeat,linear-gradient(#fff,#fff) center/2px 12px no-repeat,#2254AA !important}
+  #root form button[type=submit]{background:#2254AA !important;color:#fff !important}
+  .pm-win{box-shadow:0 24px 60px rgba(0,0,0,.5) !important;border-color:rgba(250,249,245,.14) !important}
+
   html, body { margin:0; padding:0; }
   * { box-sizing: border-box; }
   body { font-family: Onest, system-ui, -apple-system, sans-serif; background: #FAFAF8; }
@@ -19,7 +46,7 @@
 </style>
 </head>
 <body>
-<div id="root"></div>
+<div id="root"></div><div class="pm-grain" aria-hidden="true"></div>
 <script>
 window.addEventListener("error",function(e){var r=document.getElementById("root");if(r&&!r.hasChildNodes()){r.innerHTML='<div style="max-width:640px;margin:60px auto;padding:24px;font:15px system-ui;color:#1a1a1a"><b>This page hit an error:</b><pre style="white-space:pre-wrap;color:#c0362c">'+String(e.message||e.error)+'</pre></div>';}});
 </script>
