@@ -700,5 +700,11 @@ cycle();
   setTimeout(next, 650 + 260 + 1200);
 })();
 </script>
+<script>
+(function(){function fit(){var l=document.querySelector('.ago-footer-lockup'),t=document.querySelector('.ago-footer-tag');if(!l||!t)return;var s=l.querySelector('.ago-nav-sub');if(!s)return;
+t.style.fontSize='';t.style.whiteSpace='nowrap';var base=parseFloat(getComputedStyle(t).fontSize);var r=document.createRange();r.selectNodeContents(t);var w=r.getBoundingClientRect().width;
+var target=s.getBoundingClientRect().right-l.getBoundingClientRect().left;if(w>0&&target>0)t.style.fontSize=(base*target/w).toFixed(2)+'px';}
+fit();window.addEventListener('resize',fit);window.addEventListener('load',fit);if(document.fonts){if(document.fonts.ready)document.fonts.ready.then(fit);if(document.fonts.addEventListener)document.fonts.addEventListener('loadingdone',fit);}})();
+</script>
 </body>
 </html>
