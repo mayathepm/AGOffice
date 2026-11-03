@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The AGOffice — Adaptable Governance Office</title>
-<meta name="description" content="AGOffice™ is a strategic creative operations partner to agencies, brands, and organizations responsible for developing and delivering advertising and marketing creative. Through adaptable workflow governance and short- and long-term expert support, we help clients deliver sustainable impact and scale operational efficiency.">
+<meta name="description" content="AGOffice™ is a global strategic partner to agencies, brands, and organizations that develop and deliver marketplace creative content, helping them scale operational efficiency through governed workflows.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -58,7 +58,7 @@
   .ago-nav-sub { font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #1F4FA0; line-height: 1; white-space: nowrap; }
   .ago-social { color: #DAD8D0; display: inline-flex; transition: color .15s ease; }
   .ago-social:hover { color: #1F4FA0; }
-  @media (min-width: 861px) and (max-width: 1080px) { .ago-nav-sub, .ago-nav-divider { display: none !important; } }
+  @media (min-width: 861px) and (max-width: 1110px) { .ago-nav-sub, .ago-nav-divider { display: none !important; } }
   .ago-nav-divider { width: 1px; height: 20px; background: rgba(28,27,24,0.15); flex-shrink: 0; }
   @media (max-width: 860px) {
     .ago-hide-mobile { display: none !important; }
@@ -80,7 +80,7 @@
     .ago-hero-ctas a { flex: 1 1 0; min-width: 0; text-align: center; box-sizing: border-box; padding: 14px 8px !important; font-size: 13.5px !important; }
     .ago-spectrum-row { font-size: 22px !important; }
     .ago-spectrum-group { white-space: normal; }
-    .ago-hero-h1 { font-size: clamp(28px, 9vw, 38px) !important; }
+    .ago-hero-h1 { font-size: clamp(28px, 9vw, 44px) !important; }
     .ago-nav-sub { font-size: 8px; letter-spacing: 1.2px; }
     .ago-nav-sub-top { letter-spacing: 0.8px; }
     .ago-hero-break-1, .ago-hero-break-2 { display: block; }
@@ -110,6 +110,8 @@
 .ago-glow::before{width:38%;height:5%}.ago-glow::after{width:5%;height:38%}
 @keyframes ago-glow{0%,100%{box-shadow:0 0 0 0 rgba(31,79,160,.45),0 0 22px 4px rgba(31,79,160,.35)}50%{box-shadow:0 0 0 22px rgba(31,79,160,0),0 0 44px 14px rgba(31,79,160,.5)}}
 @media (prefers-reduced-motion:reduce){.ago-glow{animation:none;box-shadow:0 0 30px 8px rgba(31,79,160,.4)}}
+.ago-plus{animation:ago-glow 3.2s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.ago-plus{animation:none;box-shadow:0 0 18px 4px rgba(31,79,160,.5)}}
 @media (min-width:861px){
  #top{display:grid !important;grid-template-columns:auto 1fr;column-gap:36px;row-gap:20px;align-items:center}
  #top>*{grid-column:1 / -1}
@@ -120,7 +122,39 @@
  #top{display:grid !important;grid-template-columns:auto 1fr;column-gap:12px;row-gap:20px;align-items:center}
  #top>*{grid-column:1 / -1}
  #top>.ago-hero-h1{grid-column:1;grid-row:1}
- #top>.ago-glow{grid-column:2;grid-row:1;width:min(96px,24vw);height:min(96px,24vw);align-self:center;justify-self:center}
+ #top>.ago-glow{grid-column:2;grid-row:1;width:min(96px,24vw);height:min(96px,24vw);align-self:center;justify-self:center} #top>.ago-hero-h1{font-size:clamp(22px,7.5vw,44px) !important}
+ #top>.ago-glow{width:min(72px,14vw);height:min(72px,14vw)}
+}
+
+@media (min-width:861px){
+ #top>.ago-hero-h1{font-size:clamp(34px,5vw,66px) !important;min-width:0}
+ #top>.ago-glow{width:clamp(140px,14vw,200px);height:clamp(140px,14vw,200px)}
+}
+@media (min-width:861px) and (max-height:520px){ #top>.ago-hero-h1{font-size:clamp(34px,5.4vw,60px) !important} }
+
+/* hero choreography */
+.ago-hero-h1{animation:ago-rise .8s cubic-bezier(.2,.85,.2,1) .1s backwards}
+#ago-word{display:block;opacity:1;transition:opacity .26s ease}
+#ago-word.agw-in,#ago-word.agw-static{opacity:1}
+#ago-word.agw-out{opacity:0}
+.ago-glow{transition:transform .8s cubic-bezier(.6,0,.2,1)}
+.ago-ripple{position:absolute;inset:0;border-radius:50%;border:2px solid rgba(31,79,160,.55);pointer-events:none;animation:ago-ripple 1.1s ease-out forwards}
+@keyframes ago-ripple{from{transform:scale(1);opacity:.7}to{transform:scale(1.9);opacity:0}}
+@keyframes ago-rise{from{opacity:0;transform:translateY(.45em)}to{opacity:1;transform:none}}
+@keyframes ago-pop{from{opacity:0;transform:scale(.55)}to{opacity:1;transform:none}}
+.ago-glow{animation:ago-pop .9s cubic-bezier(.2,.85,.2,1) .3s backwards,ago-glow 3.2s ease-in-out 1.2s infinite}
+#top>:nth-child(n+3){animation:ago-rise .8s ease-out .85s backwards}
+@media (prefers-reduced-motion:reduce){
+ .ago-hero-h1,.ago-glow,#top>:nth-child(n+3){animation:none !important}
+ .ago-glow{transition:none}
+}
+@media (max-width:860px){
+ div:has(>.ago-nav-sub-top){flex-shrink:1 !important;min-width:0}
+ .ago-nav-sub-top{white-space:normal !important;line-height:1.35 !important;min-width:0}
+}
+@media (max-width:860px){
+ #top>.ago-hero-h1{font-size:clamp(24px,8vw,46px) !important}
+ #top>.ago-glow{width:min(96px,24vw);height:min(96px,24vw)}
 }
 </style></head>
 <body>
@@ -133,7 +167,7 @@
       <div style="display: flex; align-items: center; gap: 16px; flex-shrink: 0;">
         <a href="#top" style="display: flex; align-items: baseline; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 21px; letter-spacing: -0.01em; color: #1C1B18;">AGOffice<span aria-hidden="true" style="display: inline-block; width: .216em; height: .216em; border-radius: 50%; background: #1F4FA0; position: relative; top: -.004em; margin: 0 .0425em;"></span></a>
         <div class="ago-nav-divider"></div>
-        <div class="ago-nav-sub ago-nav-sub-top">Strategic Creative Operations</div>
+        <div class="ago-nav-sub ago-nav-sub-top">Integrated Operations and Project Delivery</div>
         <div class="ago-hide-mobile" style="display: none; width: 1px; height: 20px; background: rgba(28,27,24,0.15);"></div>
         <!-- ARCHIVED: nav tagline (Maya may want it back) -->
         <div class="ago-hide-mobile" style="display: none; font-size: 10.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #1F4FA0; max-width: 250px; line-height: 1.35;">Project &amp; PMO Governance for Strategic &amp; Creative Teams</div>
@@ -146,7 +180,7 @@
         <a class="ago-navlink" href="pmohq.html">PMOHQ</a>
         <a class="ago-navlink" href="#about">About</a>
         <a class="ago-navlink" href="blog/index.html">Blog</a>
-        <a class="ago-navlink" href="careers.html">Referrals</a>
+        <a class="ago-navlink" href="referrals.html">Referrals</a>
         <a href="#intake" style="background: #1F4FA0; color: #FAF9F5; padding: 10px 18px; border-radius: 2px; font-weight: 700; font-size: 13.5px;">Pull Up</a>
       </div>
       <button class="ago-show-mobile" onclick="toggleMobileMenu()" aria-label="Menu" style="display: none; background: none; border: none; padding: 8px; cursor: pointer; flex-direction: column; gap: 5px;">
@@ -161,7 +195,7 @@
         <a href="pmohq.html" style="padding: 13px 0; font-size: 15px; font-weight: 600; color: #1C1B18; border-bottom: 1px solid rgba(28,27,24,0.07);">PMOHQ</a>
         <a onclick="closeMobileMenu()" href="#about" style="padding: 13px 0; font-size: 15px; font-weight: 600; color: #1C1B18; border-bottom: 1px solid rgba(28,27,24,0.07);">About</a>
         <a href="blog/index.html" style="padding: 13px 0; font-size: 15px; font-weight: 600; color: #1C1B18; border-bottom: 1px solid rgba(28,27,24,0.07);">Blog</a>
-        <a href="careers.html" style="padding: 13px 0; font-size: 15px; font-weight: 600; color: #1C1B18; border-bottom: 1px solid rgba(28,27,24,0.07);">Referrals</a>
+        <a href="referrals.html" style="padding: 13px 0; font-size: 15px; font-weight: 600; color: #1C1B18; border-bottom: 1px solid rgba(28,27,24,0.07);">Referrals</a>
         <a onclick="closeMobileMenu()" href="#intake" style="padding: 13px 0; font-size: 15px; font-weight: 700; color: #1F4FA0;">Contact</a>
       </div>
   </div>
@@ -169,9 +203,11 @@
   <!-- HERO -->
   <div id="top" style="max-width: 1180px; margin: 0 auto; padding: 48px 24px 40px; display: flex; flex-direction: column; gap: 20px;">
     <div class="ago-glow" aria-hidden="true"></div>
-    <h1 class="ago-hero-h1" style="margin: 0; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: clamp(21px, 6vw, 48px); line-height: 1.12; max-width: 100%; color: #1C1B18; text-transform: uppercase; letter-spacing: -0.01em; white-space: nowrap;">Where your<br class="ago-hero-break-1"/> <span style="display: inline-block; overflow: hidden; height: 1.15em; line-height: 1.15; vertical-align: top;"><span id="ago-rotate-word-inner" style="color: #1F4FA0;">momentum</span></span><br/> flows.</h1>
-    <p style="margin: 0; font-size: 16.5px; line-height: 1.65; max-width: 600px; color: #4A4944;">AGOffice&trade; is a strategic creative operations partner to agencies, brands, and organizations responsible for developing and delivering advertising and marketing creative.</p>
-    <p style="margin: 0; font-size: 16.5px; line-height: 1.65; max-width: 600px; color: #4A4944;">Through adaptable workflow governance and short- and long-term expert support, we help clients deliver sustainable impact and scale operational efficiency.</p>
+    <!-- ARCHIVED: hero animation "Where your [word] flows." (now on the PMOHQ Explore page)
+ <h1 class="ago-hero-h1" style="margin: 0; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: clamp(21px, 6vw, 48px); line-height: 1.12; max-width: 100%; color: #1C1B18; text-transform: uppercase; letter-spacing: -0.01em; white-space: nowrap;">Where your<br class="ago-hero-break-1"/> <span style="display: inline-block; overflow: hidden; height: 1.15em; line-height: 1.15; vertical-align: top;"><span id="ago-rotate-word-inner" style="color: #1F4FA0;">momentum</span></span><br/> flows.</h1>
+ -->
+ <h1 class="ago-hero-h1" aria-label="Where your work flows" style="margin: 0; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: clamp(26px, 7vw, 60px); line-height: 1.12; max-width: 100%; color: #1C1B18; text-transform: uppercase; letter-spacing: -0.01em; white-space: nowrap;">Where your<br class="ago-hero-break-1"/> <span id="ago-word-box" aria-hidden="true" style="display: inline-block; overflow: hidden; height: 1.15em; line-height: 1.15; vertical-align: top;"><span id="ago-word" style="color: #1F4FA0;">work</span></span><br/> flows.</h1>
+    <p style="margin: 0; font-size: 16.5px; line-height: 1.65; max-width: 600px; color: #4A4944;">AGOffice&trade; is a strategic partner to founders, teams, and organizations, helping them plan, manage, and deliver marketing, creative, and technology initiatives through integrated operations and project delivery solutions.</p>
     <div class="ago-hero-ctas" style="margin-top: 6px; display: flex; flex-wrap: wrap; gap: 14px;">
       <a href="#framework" class="ago-btn-primary" style="background: #1F4FA0; color: #FAF9F5; border: 2px solid #1F4FA0; padding: 14px 28px; font-weight: 700; font-size: 14.5px; letter-spacing: 0.3px; border-radius: 2px;">Our Approach</a>
       <a href="#intake" class="ago-btn-primary ago-btn-secondary" style="border: 2px solid #1C1B18; color: #1C1B18; background: transparent; padding: 14px 28px; font-weight: 700; font-size: 14.5px; letter-spacing: 0.3px; border-radius: 2px;">Work With Us</a>
@@ -475,7 +511,7 @@
             <div class="ago-nav-divider" style="background: rgba(250,249,245,0.25);"></div>
             <div class="ago-nav-sub" style="color: #9DB7E6;">Where Your Work Flows</div>
           </div>
-          <p class="ago-footer-tag" style="margin: 0; font-size: 13.5px; line-height: 1.6; color: #B9B7AE;">Your Strategic Partner for Creative Operations</p>
+          <p class="ago-footer-tag" style="margin: 0; font-size: 13.5px; line-height: 1.6; color: #B9B7AE;">Integrated Operations and Project Delivery</p>
           <!-- ARCHIVED: Pre-Onboarding Deck link (may reuse elsewhere)
           <a href="#" onclick="return false;" style="font-size: 13px; font-weight: 700; color: #DAD8D0; cursor: default; line-height: 1.5;"><span style="color: #1F4FA0;">&rarr;</span> Download the AGOffice&trade; Pre-Onboarding Deck<br/><span style="font-weight: 400; color: #B9B7AE;">an expanded overview of how AGOffice&trade; works &amp; what to expect when you work with us.</span> <span style="font-size: 10.5px; font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase; color: #1F4FA0;">(Coming Soon)</span></a>
           -->
@@ -490,7 +526,7 @@
             <div style="font-size: 10.5px; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; color: #8A897F; margin-bottom: 4px;">AGOffice</div>
             <a class="ago-navlink" href="#framework" style="font-size: 13.5px; color: #DAD8D0;">Approach</a>
             <a class="ago-navlink" href="#faq" style="font-size: 13.5px; color: #DAD8D0;">FAQ</a>
-            <a class="ago-navlink" href="careers.html" style="font-size: 13.5px; color: #DAD8D0;">Request a Referral</a>
+            <a class="ago-navlink" href="referrals.html" style="font-size: 13.5px; color: #DAD8D0;">Request a Referral</a>
             <!-- ARCHIVED: Our Network footer link (reached through the referral page for now)
             <a class="ago-navlink" href="partners.html" style="font-size: 13.5px; color: #DAD8D0;">Our Network</a>
             -->
@@ -543,19 +579,126 @@
     var i = 0;
     var el = document.getElementById('ago-rotate-word-inner');
     if (!el) return;
+function lockWidth() {
+  var box = el.parentNode, max = 0;
+  box.style.width = '';
+  el.style.display = 'inline-block';
+  words.forEach(function (w) { el.textContent = w; max = Math.max(max, el.getBoundingClientRect().width); });
+  el.textContent = words[i];
+  el.style.display = '';
+  box.style.width = Math.ceil(max) + 'px';
+}
+function fitBecause() {
+  var A = document.getElementById('ago-fit-a'), B = document.getElementById('ago-fit-b');
+  if (!A || !B) return;
+  var br = A.nextElementSibling;
+  A.style.fontSize = ''; B.style.fontSize = ''; A.style.display = 'inline-block'; B.style.display = 'inline-block';
+  A.style.justifySelf = 'start'; B.style.justifySelf = 'start';
+  if (br) br.style.display = '';
+  if (!(window.matchMedia && matchMedia('(max-width: 860px)').matches)) { A.style.display = ''; B.style.display = ''; return; }
+  var base = parseFloat(getComputedStyle(A).fontSize);
+  B.style.fontSize = (base * 1.08) + 'px';
+  var wa = A.getBoundingClientRect().width, wb = B.getBoundingClientRect().width;
+  if (wa && wb) A.style.fontSize = (base * wb / wa) + 'px';
+  A.style.display = 'block';
+  if (br) br.style.display = 'none';
+}
+fitBecause();
+window.addEventListener('resize', fitBecause);
+window.addEventListener('load', fitBecause);
+window.addEventListener('orientationchange', fitBecause);
+[100, 300, 700, 1500, 3000].forEach(function (t) { setTimeout(fitBecause, t); });
+if (document.fonts) {
+  if (document.fonts.ready) document.fonts.ready.then(fitBecause);
+  if (document.fonts.addEventListener) document.fonts.addEventListener('loadingdone', fitBecause);
+  if (document.fonts.load) document.fonts.load('700 1em Poppins').then(fitBecause, function () {});
+}
+if (window.ResizeObserver) {
+  var h1 = document.getElementById('ago-fit-a').parentNode, raf = 0;
+  new ResizeObserver(function () { cancelAnimationFrame(raf); raf = requestAnimationFrame(fitBecause); }).observe(h1);
+}
+lockWidth();
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(lockWidth);
+window.addEventListener('resize', lockWidth);
+    if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    // the current word scrolls up and out, the next one rises in from below
     function cycle() {
-      setTimeout(function () {
-        el.style.opacity = '0';
-        setTimeout(function () {
-          i = (i + 1) % words.length;
-          el.textContent = words[i];
-          el.style.opacity = '1';
-          cycle();
-        }, 260);
-      }, 1200);
-    }
-    cycle();
+  setTimeout(function () {
+    el.style.opacity = '0';
+    setTimeout(function () {
+      i = (i + 1) % words.length;
+      el.textContent = words[i];
+      el.style.opacity = '1';
+      cycle();
+    }, 260);
+  }, 1200);
+}
+cycle();
   })();
 </script>
-<style>body::after{content:"";display:block;height:56px;background:#1C1B18}.fd-pill{position:fixed;left:14px;bottom:14px;z-index:900;display:inline-flex;align-items:center;gap:8px;padding:7px 14px 7px 8px;border-radius:999px;background:rgba(28,27,24,.78);color:#FAF9F5;font:600 11px/1 Poppins,Onest,system-ui,sans-serif;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;border:1px solid rgba(250,249,245,.25);transition:transform .2s ease,background .2s ease}.fd-pill:hover{background:#1F4FA0;transform:translateY(-2px)}.fd-pill i{width:20px;height:20px;border-radius:50%;background:#1F4FA0;display:inline-block;position:relative;flex:none}.fd-pill:hover i{background:#FAF9F5}.fd-pill i:before,.fd-pill i:after{content:"";position:absolute;left:50%;top:50%;background:#FAF9F5;transform:translate(-50%,-50%)}.fd-pill:hover i:before,.fd-pill:hover i:after{background:#1F4FA0}.fd-pill i:before{width:10px;height:2px}.fd-pill i:after{width:2px;height:10px}@media(max-width:480px){.fd-pill{left:10px;bottom:10px;padding:6px 12px 6px 6px;font-size:10px}}@media print{.fd-pill{display:none}}</style><a class="fd-pill" href="index.html" aria-label="Back to the front door"><i></i>Front door</a></body>
+<style>body::after{content:"";display:block;height:56px;background:#1C1B18}.fd-pill{position:fixed;left:14px;bottom:14px;z-index:900;display:inline-flex;align-items:center;gap:8px;padding:7px 14px 7px 8px;border-radius:999px;background:rgba(28,27,24,.78);color:#FAF9F5;font:600 11px/1 Poppins,Onest,system-ui,sans-serif;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;border:1px solid rgba(250,249,245,.25);transition:transform .2s ease,background .2s ease}.fd-pill:hover{background:#1F4FA0;transform:translateY(-2px)}.fd-pill i{width:20px;height:20px;border-radius:50%;background:#1F4FA0;display:inline-block;position:relative;flex:none}.fd-pill:hover i{background:#FAF9F5}.fd-pill i:before,.fd-pill i:after{content:"";position:absolute;left:50%;top:50%;background:#FAF9F5;transform:translate(-50%,-50%)}.fd-pill:hover i:before,.fd-pill:hover i:after{background:#1F4FA0}.fd-pill i:before{width:10px;height:2px}.fd-pill i:after{width:2px;height:10px}@media(max-width:480px){.fd-pill{left:10px;bottom:10px;padding:6px 12px 6px 6px;font-size:10px}}@media print{.fd-pill{display:none}}</style><a class="fd-pill" href="index.html" aria-label="Back to the front door"><i></i>Front door</a><script>
+(function () {
+  var words = ['work', 'momentum', 'creativity', 'strategy', 'delivery', 'decisions'];
+  var box = document.getElementById('ago-word-box'), el = document.getElementById('ago-word');
+  var plus = document.querySelector('.ago-glow');
+  if (!box || !el) return;
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var i = 0, turns = 0;
+
+  function fitBecause() {
+    var A = document.getElementById('ago-fit-a'), B = document.getElementById('ago-fit-b');
+    if (!A || !B) return;
+    var br = A.nextElementSibling;
+    A.style.fontSize = ''; B.style.fontSize = ''; A.style.display = 'inline-block'; B.style.display = 'inline-block';
+    A.style.justifySelf = 'start'; B.style.justifySelf = 'start';
+    if (br) br.style.display = '';
+    if (!(window.matchMedia && matchMedia('(max-width: 860px)').matches)) { A.style.display = ''; B.style.display = ''; return; }
+    var base = parseFloat(getComputedStyle(A).fontSize);
+    B.style.fontSize = (base * 1.08) + 'px';
+    var wa = A.getBoundingClientRect().width, wb = B.getBoundingClientRect().width;
+    if (wa && wb) A.style.fontSize = (base * wb / wa) + 'px';
+    A.style.display = 'block';
+    if (br) br.style.display = 'none';
+  }
+
+  function lockWidth() {
+    var max = 0, m = document.createElement('span');
+    m.style.cssText = 'position:absolute;visibility:hidden;white-space:nowrap;display:inline-block';
+    box.appendChild(m);
+    words.forEach(function (w) { m.textContent = w; max = Math.max(max, m.getBoundingClientRect().width); });
+    box.removeChild(m);
+    box.style.width = Math.ceil(max) + 'px';
+  }
+  function render(w) { el.textContent = w; }
+  function refit() { fitBecause(); lockWidth(); }
+  refit();
+  window.addEventListener('resize', refit);
+  window.addEventListener('load', refit);
+  if (document.fonts) {
+    if (document.fonts.ready) document.fonts.ready.then(refit);
+    if (document.fonts.addEventListener) document.fonts.addEventListener('loadingdone', refit);
+  }
+  render(words[0]);
+  if (reduce) { el.className = 'agw-static'; return; }
+  el.className = 'agw-in';
+  function ripple() {
+    if (!plus) return;
+    var r = document.createElement('i'); r.className = 'ago-ripple'; plus.appendChild(r);
+    setTimeout(function () { if (r.parentNode) r.parentNode.removeChild(r); }, 1200);
+  }
+  function next() {
+    if (document.hidden) { setTimeout(next, 600); return; }
+    el.className = 'agw-out';
+    setTimeout(function () {
+      i = (i + 1) % words.length;
+      render(words[i]);
+      void el.offsetHeight;
+      el.className = 'agw-in';
+      setTimeout(next, 1200);
+    }, 300);
+  }
+  setTimeout(next, 650 + 260 + 1200);
+})();
+</script>
+</body>
 </html>
